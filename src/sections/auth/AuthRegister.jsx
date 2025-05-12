@@ -14,6 +14,10 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+
+
 // third-party
 import * as Yup from 'yup';
 import { Formik } from 'formik';
@@ -55,25 +59,39 @@ export default function AuthRegister() {
 
   return (
     <>
-      <Formik
-        initialValues={{
-          firstname: '',
-          lastname: '',
-          email: '',
-          company: '',
-          password: '',
-          submit: null
-        }}
-        validationSchema={Yup.object().shape({
-          firstname: Yup.string().max(255).required('First Name is required'),
-          lastname: Yup.string().max(255).required('Last Name is required'),
-          email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
-          password: Yup.string()
-            .required('Password is required')
-            .test('no-leading-trailing-whitespace', 'Password cannot start or end with spaces', (value) => value === value.trim())
-            .max(10, 'Password must be less than 10 characters')
-        })}
-      >
+     <Formik
+  initialValues={{
+    firstname: '',
+    lastname: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+      acceptTerms: false,
+
+    submit: null
+  }}
+  validationSchema={Yup.object().shape({
+    firstname: Yup.string().max(255).required('First Name is required'),
+    lastname: Yup.string().max(255).required('Last Name is required'),
+    email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
+    password: Yup.string()
+      .required('Password is required')
+      .test(
+        'no-leading-trailing-whitespace',
+        'Password cannot start or end with spaces',
+        (value) => value === value.trim()
+      )
+      .max(10, 'Password must be less than 10 characters'),
+    confirmPassword: Yup.string()
+      .oneOf([Yup.ref('password'), null], 'Passwords must match')
+      .required('Please confirm your password'),
+      acceptTerms: Yup.bool()
+  .oneOf([true], 'You must accept the terms and conditions')
+
+  })}
+  
+>
+
         {({ errors, handleBlur, handleChange, touched, values }) => (
           <form noValidate>
             <Grid container spacing={3}>
@@ -120,27 +138,7 @@ export default function AuthRegister() {
                   </FormHelperText>
                 )}
               </Grid>
-              <Grid size={12}>
-                <Stack sx={{ gap: 1 }}>
-                  <InputLabel htmlFor="company-signup">Company</InputLabel>
-                  <OutlinedInput
-                    fullWidth
-                    error={Boolean(touched.company && errors.company)}
-                    id="company-signup"
-                    value={values.company}
-                    name="company"
-                    onBlur={handleBlur}
-                    onChange={handleChange}
-                    placeholder="Demo Inc."
-                    inputProps={{}}
-                  />
-                </Stack>
-                {touched.company && errors.company && (
-                  <FormHelperText error id="helper-text-company-signup">
-                    {errors.company}
-                  </FormHelperText>
-                )}
-              </Grid>
+             
               <Grid size={12}>
                 <Stack sx={{ gap: 1 }}>
                   <InputLabel htmlFor="email-signup">Email Address*</InputLabel>
@@ -200,7 +198,43 @@ export default function AuthRegister() {
                     {errors.password}
                   </FormHelperText>
                 )}
-                <FormControl fullWidth sx={{ mt: 2 }}>
+           
+              </Grid>
+              <Grid size={12}>
+        <Stack sx={{ gap: 1 }}>
+          <InputLabel htmlFor="confirm-password">Confirm Password</InputLabel>
+          <OutlinedInput
+            fullWidth
+            error={Boolean(touched.confirmPassword && errors.confirmPassword)}
+            id="confirm-password"
+            type={showPassword ? 'text' : 'password'}
+            value={values.confirmPassword}
+            name="confirmPassword"
+            onBlur={handleBlur}
+            onChange={handleChange}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle confirm password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                  color="secondary"
+                >
+                  {showPassword ? <EyeOutlined /> : <EyeInvisibleOutlined />}
+                </IconButton>
+              </InputAdornment>
+            }
+            placeholder="******"
+            inputProps={{}}
+          />
+        </Stack>
+      {touched.confirmPassword && errors.confirmPassword && (
+        <FormHelperText error id="helper-text-confirm-password">
+          {errors.confirmPassword}
+        </FormHelperText>
+      )}
+           <FormControl fullWidth sx={{ mt: 2 }}>
                   <Grid container spacing={2} alignItems="center">
                     <Grid>
                       <Box sx={{ bgcolor: level?.color, width: 85, height: 8, borderRadius: '7px' }} />
@@ -212,8 +246,37 @@ export default function AuthRegister() {
                     </Grid>
                   </Grid>
                 </FormControl>
-              </Grid>
-              <Grid size={12}>
+    </Grid>
+
+    <Grid size={12}>
+  <FormControl error={Boolean(touched.acceptTerms && errors.acceptTerms)}>
+    <FormControlLabel
+      control={
+        <Checkbox
+          name="acceptTerms"
+          checked={values.acceptTerms}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          color="primary"
+        />
+      }
+      label={
+        <Typography variant="body2">
+          I agree to the&nbsp;
+          <Link component={RouterLink} to="/terms" target="_blank" underline="hover">
+            Terms and Conditions
+          </Link>
+        </Typography>
+      }
+    />
+    {touched.acceptTerms && errors.acceptTerms && (
+      <FormHelperText>{errors.acceptTerms}</FormHelperText>
+    )}
+  </FormControl>
+</Grid>
+
+
+              {/* <Grid size={12}>
                 <Typography variant="body2">
                   By Signing up, you agree to our &nbsp;
                   <Link variant="subtitle2" component={RouterLink} to="#">
@@ -224,7 +287,7 @@ export default function AuthRegister() {
                     Privacy Policy
                   </Link>
                 </Typography>
-              </Grid>
+              </Grid> */}
               {errors.submit && (
                 <Grid size={12}>
                   <FormHelperText error>{errors.submit}</FormHelperText>
