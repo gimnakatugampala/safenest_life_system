@@ -1,91 +1,49 @@
 {
-  "name": "mantis-material-free-react",
-  "version": "1.4.1",
-  "private": false,
-  "homepage": "https://themewagon.github.io/mantis-free-react-admin-template",
-  "author": {
-    "name": "Gimna Katugampala",
-    "email": "gimnakatugampala1@gmail.com"
-  },
+  "name": "deskapp",
+  "version": "0.0.2",
+  "description": "deskapp free bootstrap 4 admin template",
+  "main": "gulpfile.js",
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "build-stage": "env-cmd -f .env.qa vite build",
-    "preview": "vite preview",
-    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
-    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "knip": "knip",
-    "predeploy": "npm run build && cp ./dist/index.html ./dist/404.html",
-    "deploy": "gh-pages -d dist"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dropways/deskapp"
+  },
+  "keywords": [
+    "admin",
+    "bootstrap 4",
+    "admin dashboard",
+    "free dashboard",
+    "admin template",
+    "admin panel",
+    "ui kit",
+    "bootstrap template"
+  ],
+  "author": "Ankit Hingarajiya",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-changed": "^3.1.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-coffee": "^2.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-install": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.2.1",
+    "streamqueue": "^1.1.1"
   },
   "dependencies": {
-    "@ant-design/colors": "7.2.0",
-    "@ant-design/icons": "5.6.0",
-    "@emotion/cache": "11.14.0",
-    "@emotion/react": "11.14.0",
-    "@emotion/styled": "11.14.0",
-    "@fontsource/inter": "5.1.1",
-    "@fontsource/poppins": "5.1.1",
-    "@fontsource/public-sans": "5.1.2",
-    "@fontsource/roboto": "5.1.1",
-    "@mui/base": "5.0.0-beta.69",
-    "@mui/lab": "6.0.0-beta.24",
-    "@mui/material": "6.4.1",
-    "@mui/system": "6.4.1",
-    "@mui/x-charts": "7.24.1",
-    "@vitejs/plugin-react": "4.3.4",
-    "formik": "2.4.6",
-    "framer-motion": "^10.18.0",
-    "lodash-es": "4.17.21",
-    "persona": "^5.1.5",
-    "react": "18.3.1",
-    "react-device-detect": "2.2.3",
-    "react-dom": "18.3.1",
-    "react-number-format": "5.4.3",
-    "react-router": "7.1.3",
-    "react-router-dom": "7.1.3",
-    "simplebar-react": "3.3.0",
-    "swr": "2.3.0",
-    "vite": "6.0.11",
-    "vite-jsconfig-paths": "2.0.1",
-    "web-vitals": "4.2.4",
-    "yup": "1.6.1"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@eslint/compat": "1.2.5",
-    "@eslint/eslintrc": "3.2.0",
-    "@eslint/js": "9.19.0",
-    "@types/node": "22.13.5",
-    "eslint": "9.19.0",
-    "eslint-config-prettier": "10.0.1",
-    "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-prettier": "5.2.3",
-    "eslint-plugin-react": "7.37.4",
-    "eslint-plugin-react-hooks": "5.1.0",
-    "gh-pages": "^6.3.0",
-    "immutable": "4.3.7",
-    "knip": "5.45.0",
-    "prettier": "3.4.2",
-    "prettier-eslint-cli": "8.0.1"
-  },
-  "packageManager": "yarn@4.6.0"
+    "gulp-csso": "^4.0.1",
+    "gulp-install": "^1.1.0",
+    "install": "^0.12.1",
+    "npm": "^6.4.1",
+    "onscreen": "^1.1.3"
+  }
 }
