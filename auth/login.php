@@ -1,4 +1,4 @@
-<?php include_once '../includes/header.php'; ?>
+<?php include_once '../includes/a_header.php'; ?>
 
 
 <body class="login-page">
@@ -89,4 +89,4 @@
 		</div>
 	</div>
 	<!-- js -->
-<?php include_once '../includes/footer.php'; ?>
+<?php include_once '../includes/a_footer.php'; ?>
