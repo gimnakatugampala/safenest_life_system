@@ -2,7 +2,7 @@
 
 
 <body class="login-page">
-	<div class="login-header box-shadow">
+	<!-- <div class="login-header box-shadow">
 		<div class="container-fluid d-flex justify-content-between align-items-center">
 			<div class="brand-logo">
 				<a href="login.html">
@@ -15,20 +15,20 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-md-6 col-lg-7">
+				<!-- <div class="col-md-6 col-lg-7">
 					<img src="../vendors/images/login-page-img.png" alt="">
-				</div>
-				<div class="col-md-6 col-lg-5">
+				</div> -->
+				<div class="col-md-12 col-lg-12">
 					<div class="login-box bg-white box-shadow border-radius-10">
 						<div class="login-title">
-							<h2 class="text-center text-primary">Login To DeskApp</h2>
+							<h2 class="text-center text-primary">Login To Safenest</h2>
 						</div>
 						<form>
-							<div class="select-role">
+							<!-- <div class="select-role">
 								<div class="btn-group btn-group-toggle" data-toggle="buttons">
 									<label class="btn active">
 										<input type="radio" name="options" id="admin">
@@ -43,7 +43,7 @@
 										Employee
 									</label>
 								</div>
-							</div>
+							</div> -->
 							<div class="input-group custom">
 								<input type="text" class="form-control form-control-lg" placeholder="Username">
 								<div class="input-group-append custom">
@@ -78,7 +78,7 @@
 									</div>
 									<div class="font-16 weight-600 pt-10 pb-10 text-center" data-color="#707373">OR</div>
 									<div class="input-group mb-0">
-										<a class="btn btn-outline-primary btn-lg btn-block" href="../register.html">Register To Create Account</a>
+										<a class="btn btn-outline-primary btn-lg btn-block" href="../auth/register.php">Create Account</a>
 									</div>
 								</div>
 							</div>
