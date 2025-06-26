@@ -2,7 +2,7 @@
 
 
 <body class="login-page">
-	<div class="login-header box-shadow">
+	<!-- <div class="login-header box-shadow">
 		<div class="container-fluid d-flex justify-content-between align-items-center">
 			<div class="brand-logo">
 				<a href="login.html">
@@ -15,14 +15,14 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="register-page-wrap d-flex align-items-center flex-wrap justify-content-center">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-md-6 col-lg-7">
+				<!-- <div class="col-md-6 col-lg-7">
 					<img src="../vendors/images/register-page-img.png" alt="">
-				</div>
-				<div class="col-md-6 col-lg-5">
+				</div> -->
+				<div class="col-md-12 col-lg-12">
 					<div class="register-box bg-white box-shadow border-radius-10">
 						<div class="wizard-content">
 							<form class="tab-wizard2 wizard-circle wizard">
