@@ -109,7 +109,7 @@
 						<span class="user-icon">
 							<img src="./vendors/images/photo1.jpg" alt="">
 						</span>
-						<span class="user-name">Ross C. Lopez</span>
+						<span class="user-name">Gimna Katugampala</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
@@ -119,8 +119,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="github-link">
-				<a href="https://github.com/dropways/deskapp" target="_blank"><img src="./vendors/images/github.svg" alt=""></a>
-			</div>
+		
 		</div>
 	</div>
