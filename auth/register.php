@@ -144,7 +144,7 @@
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				</div>
 				<div class="modal-footer justify-content-center">
-					<a href="login.html" class="btn btn-primary">Done</a>
+					<a href="../" class="btn btn-primary">Done</a>
 				</div>
 			</div>
 		</div>
