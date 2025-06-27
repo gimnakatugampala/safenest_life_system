@@ -2,29 +2,17 @@
 
 
 <body class="login-page">
-	<!-- <div class="login-header box-shadow">
-		<div class="container-fluid d-flex justify-content-between align-items-center">
-			<div class="brand-logo">
-				<a href="login.html">
-					<img src="../vendors/images/deskapp-logo.svg" alt="">
-				</a>
-			</div>
-			<div class="login-menu">
-				<ul>
-					<li><a href="login.html">Login</a></li>
-				</ul>
-			</div>
-		</div>
-	</div> -->
 	<div class="register-page-wrap d-flex align-items-center flex-wrap justify-content-center">
 		<div class="container">
 			<div class="row align-items-center">
-				<!-- <div class="col-md-6 col-lg-7">
-					<img src="../vendors/images/register-page-img.png" alt="">
-				</div> -->
 				<div class="col-md-12 col-lg-12">
 					<div class="register-box bg-white box-shadow border-radius-10">
 						<div class="wizard-content">
+
+								<div class="login-title p-5">
+									<h3 class="text-center text-primary">Register To Safenest</h3>
+								</div>
+
 							<form class="tab-wizard2 wizard-circle wizard">
 								<h5>Basic Account Credentials</h5>
 								<section>
@@ -93,73 +81,6 @@
 									</div>
 								</section>
 								<!-- Step 3 -->
-								<h5>Payment Method & Info</h5>
-								<section>
-									<div class="form-wrap max-width-600 mx-auto">
-										<div class="form-group row">
-											<label class="col-sm-4 col-form-label">Credit Card Type</label>
-											<div class="col-sm-8">
-												<select class="form-control selectpicker" title="Select Card Type">
-													<option value="1">Option 1</option>
-													<option value="2">Option 2</option>
-													<option value="3">Option 3</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group row align-items-center">
-											<label class="col-sm-4 col-form-label">Credit Card Number</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="form-group row">
-											<label class="col-sm-4 col-form-label">CVC</label>
-											<div class="col-sm-3">
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="form-group row">
-											<label class="col-sm-4 col-form-label">Expiration Date</label>
-											<div class="col-sm-8">
-												<div class="row">
-													<div class="col-6">
-														<select class="form-control selectpicker" title="Month" data-size="5">
-															<option value='01'>January</option>
-															<option value='02'>February</option>
-															<option value='03'>March</option>
-															<option value='04'>April</option>
-															<option value='05'>May</option>
-															<option value='06'>June</option>
-															<option value='07'>July</option>
-															<option value='08'>August</option>
-															<option value='09'>September</option>
-															<option value='10'>October</option>
-															<option value='11'>November</option>
-															<option value='12'>December</option>
-														</select>
-													</div>
-													<div class="col-6">
-														<select class="form-control selectpicker" title="Year" data-size="5">
-															<option>2020</option>
-															<option>2019</option>
-															<option>2018</option>
-															<option>2017</option>
-															<option>2016</option>
-															<option>2015</option>
-															<option>2014</option>
-															<option>2013</option>
-															<option>2012</option>
-															<option>2011</option>
-															<option>2010</option>
-															<option>2009</option>
-														</select>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</section>
-								<!-- Step 4 -->
 								<h5>Overview Information</h5>
 								<section>
 									<div class="form-wrap max-width-600 mx-auto">
@@ -202,10 +123,14 @@
 									</div>
 								</section>
 							</form>
+							<p class="text-center pb-5">Already have an account ? <b><a href="../auth/login.php">Login</a></b></p>
 						</div>
+						
 					</div>
 				</div>
+
 			</div>
+			
 		</div>
 	</div>
 	<!-- success Popup html Start -->
