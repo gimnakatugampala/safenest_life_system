@@ -13,9 +13,9 @@
 	<script src="../vendors/scripts/dashboard.js"></script>
 
 		<!-- Slick Slider js -->
-	<script src="src/plugins/slick/slick.min.js"></script>
+	<script src="../src/plugins/slick/slick.min.js"></script>
 	<!-- bootstrap-touchspin js -->
-	<script src="src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+	<script src="../src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
 	<script>
 		jQuery(document).ready(function() {
 			jQuery('.product-slider').slick({

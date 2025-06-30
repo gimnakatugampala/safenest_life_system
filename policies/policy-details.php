@@ -5,7 +5,7 @@
 <body>
 	<div class="pre-loader">
 		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="vendors/images/deskapp-logo.svg" alt=""></div>
+			<div class="loader-logo"><img src="../vendors/images/deskapp-logo.svg" alt=""></div>
 			<div class='loader-progress' id="progress_div">
 				<div class='bar' id='bar1'></div>
 			</div>
@@ -43,30 +43,30 @@
 							<div class="col-lg-6 col-md-12 col-sm-12">
 								<div class="product-slider slider-arrow">
 									<div class="product-slide">
-										<img src="vendors/images/product-img1.jpg" alt="">
+										<img src="../vendors/images/product-img1.jpg" alt="">
 									</div>
 									<div class="product-slide">
-										<img src="vendors/images/product-img2.jpg" alt="">
+										<img src="../vendors/images/product-img2.jpg" alt="">
 									</div>
 									<div class="product-slide">
-										<img src="vendors/images/product-img3.jpg" alt="">
+										<img src="../vendors/images/product-img3.jpg" alt="">
 									</div>
 									<div class="product-slide">
-										<img src="vendors/images/product-img4.jpg" alt="">
+										<img src="../vendors/images/product-img4.jpg" alt="">
 									</div>
 								</div>
 								<div class="product-slider-nav">
 									<div class="product-slide-nav">
-										<img src="vendors/images/product-img1.jpg" alt="">
+										<img src="../vendors/images/product-img1.jpg" alt="">
 									</div>
 									<div class="product-slide-nav">
-										<img src="vendors/images/product-img2.jpg" alt="">
+										<img src="../vendors/images/product-img2.jpg" alt="">
 									</div>
 									<div class="product-slide-nav">
-										<img src="vendors/images/product-img3.jpg" alt="">
+										<img src="../vendors/images/product-img3.jpg" alt="">
 									</div>
 									<div class="product-slide-nav">
-										<img src="vendors/images/product-img4.jpg" alt="">
+										<img src="../vendors/images/product-img4.jpg" alt="">
 									</div>
 								</div>
 							</div>
@@ -101,7 +101,7 @@
 						<ul class="row">
 							<li class="col-lg-4 col-md-6 col-sm-12">
 								<div class="product-box">
-									<div class="producct-img"><img src="vendors/images/product-img1.jpg" alt=""></div>
+									<div class="producct-img"><img src="../vendors/images/product-img1.jpg" alt=""></div>
 									<div class="product-caption">
 										<h4><a href="#">Gufram Bounce Black</a></h4>
 										<div class="price">
@@ -113,7 +113,7 @@
 							</li>
 							<li class="col-lg-4 col-md-6 col-sm-12">
 								<div class="product-box">
-									<div class="producct-img"><img src="vendors/images/product-img2.jpg" alt=""></div>
+									<div class="producct-img"><img src="../vendors/images/product-img2.jpg" alt=""></div>
 									<div class="product-caption">
 										<h4><a href="#">Gufram Bounce White</a></h4>
 										<div class="price">
@@ -125,7 +125,7 @@
 							</li>
 							<li class="col-lg-4 col-md-6 col-sm-12">
 								<div class="product-box">
-									<div class="producct-img"><img src="vendors/images/product-img3.jpg" alt=""></div>
+									<div class="producct-img"><img src="../vendors/images/product-img3.jpg" alt=""></div>
 									<div class="product-caption">
 										<h4><a href="#">Contrast Lace-Up Sneakers</a></h4>
 										<div class="price">
@@ -140,7 +140,7 @@
 				</div>
 			</div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
-				DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+				
 			</div>
 		</div>
 	</div>
