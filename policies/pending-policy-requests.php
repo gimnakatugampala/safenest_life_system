@@ -63,11 +63,11 @@
 									<td>Sagittarius</td>
 									<td>45-90 </td>
 									<td>29-03-2018</td>
-									<td><span class="badge badge-pill badge-primary">Pending</span></td>
+									<td><span class="badge badge-pill badge-info">Pending</span></td>
 									<td>
                                         <button type="button" class="btn btn-primary btn-sm"><span class="icon-copy ti-eye"></span></button>
-                                        <button type="button" class="btn btn-success btn-sm"><span class="icon-copy ti-check"></span></button>
-                                        <button type="button" class="btn btn-danger btn-sm"><span class="icon-copy ti-close"></span></button>
+                                        <button id="sa-params" type="button" class="btn btn-success btn-sm"><span class="icon-copy ti-check"></span></button>
+                                        <button id="sa-warning" type="button" class="btn btn-danger btn-sm"><span class="icon-copy ti-close"></span></button>
                                     </td>
 								</tr>
 							

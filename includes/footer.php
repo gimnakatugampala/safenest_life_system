@@ -26,7 +26,11 @@
 		<script src="../src/plugins/datatables/js/pdfmake.min.js"></script>
 		<script src="../src/plugins/datatables/js/vfs_fonts.js"></script>
 		<!-- Datatable Setting js -->
-		<script src="../vendors/scripts/datatable-setting.js"></script></body>
+		<script src="../vendors/scripts/datatable-setting.js"></script>
+
+		<!-- add sweet alert js & css in footer -->
+	<script src="../src/plugins/sweetalert2/sweetalert2.all.js"></script>
+	<script src="../src/plugins/sweetalert2/sweet-alert.init.js"></script>
 
 	<script>
 		jQuery(document).ready(function() {
