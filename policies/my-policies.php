@@ -49,7 +49,7 @@
 									<th>Amount</th>
 									<th>Duration</th>
 									<th>Age Limit</th>
-									<th>Created Date</th>
+									<th>Started Date</th>
 									<th>Actions</th>
 								</tr>
 							</thead>
