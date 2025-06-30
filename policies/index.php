@@ -41,48 +41,37 @@
 							<li class="col-lg-4 col-md-6 col-sm-12">
 								<div class="product-box">
 									<div class="producct-img"><img src="../vendors/images/product-img1.jpg" alt=""></div>
-									<div class="product-caption">
+
+									<div class="product-caption text-center">
 										<h4><a href="#">Gufram Bounce Black</a></h4>
-										<div class="price">
-											<del>$55.5</del><ins>$49.5</ins>
+
+										<div class="contact-name text-center">
+											<p>UI/UX designer</p>
 										</div>
-										<a href="#" class="btn btn-outline-primary">Read More</a>
-									</div>
-								</div>
-							</li>
-							<li class="col-lg-4 col-md-6 col-sm-12">
-								<div class="product-box">
-									<div class="producct-img"><img src="../vendors/images/product-img2.jpg" alt=""></div>
-									<div class="product-caption">
-										<h4><a href="#">Gufram Bounce White</a></h4>
-										<div class="price">
-											<del>$75.5</del><ins>$50</ins>
+										
+										
+										<div class="price text-center">
+											<h6 class="text-muted"><del>LKR 55,000/=</del></h6><h3>LKR 50,000/=</h3>
 										</div>
-										<a href="#" class="btn btn-outline-primary">Select Now</a>
-									</div>
-								</div>
-							</li>
-							<li class="col-lg-4 col-md-6 col-sm-12">
-								<div class="product-box">
-									<div class="producct-img"><img src="../vendors/images/product-img3.jpg" alt=""></div>
-									<div class="product-caption">
-										<h4><a href="#">Contrast Lace-Up Sneakers</a></h4>
-										<div class="price">
-											<ins>$80</ins>
+
+										<hr>
+											<div class="pricing-card-body">
+											<div class="pricing-points">
+												<ul>
+													<li>2 TB of space</li>
+													<li>120 days of file recovery</li>
+													<li>Smart Sync</li>
+													<li>Dropbox Paper admin tools</li>
+													<li>Granular sharing permissions</li>
+													<li>User and company-managed groups</li>
+													<li>Live chat support</li>
+												</ul>
+											</div>
 										</div>
-										<a href="#" class="btn btn-outline-primary">Select Now</a>
-									</div>
-								</div>
-							</li>
-							<li class="col-lg-4 col-md-6 col-sm-12">
-								<div class="product-box">
-									<div class="producct-img"><img src="../vendors/images/product-img4.jpg" alt=""></div>
-									<div class="product-caption">
-										<h4><a href="#">Apple Watch Series 3</a></h4>
-										<div class="price">
-											<ins>$380</ins>
+										<hr>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="btn btn-outline-primary">Select Now</a>
 										</div>
-										<a href="#" class="btn btn-outline-primary">Read More</a>
 									</div>
 								</div>
 							</li>
@@ -90,48 +79,189 @@
 							<li class="col-lg-4 col-md-6 col-sm-12">
 								<div class="product-box">
 									<div class="producct-img"><img src="../vendors/images/product-img2.jpg" alt=""></div>
-									<div class="product-caption">
-										<h4><a href="#">Gufram Bounce White</a></h4>
-										<div class="price">
-											<del>$75.5</del><ins>$50</ins>
-										</div>
-										<a href="#" class="btn btn-outline-primary">Select Now</a>
-									</div>
-								</div>
-							</li>
-							<li class="col-lg-4 col-md-6 col-sm-12">
-								<div class="product-box">
-									<div class="producct-img"><img src="../vendors/images/product-img4.jpg" alt=""></div>
-									<div class="product-caption">
-										<h4><a href="#">Apple Watch Series 3</a></h4>
-										<div class="price">
-											<ins>$380</ins>
-										</div>
-										<a href="#" class="btn btn-outline-primary">Read More</a>
-									</div>
-								</div>
-							</li>
-							<li class="col-lg-4 col-md-6 col-sm-12">
-								<div class="product-box">
-									<div class="producct-img"><img src="../vendors/images/product-img1.jpg" alt=""></div>
-									<div class="product-caption">
+								
+									<div class="product-caption text-center">
 										<h4><a href="#">Gufram Bounce Black</a></h4>
-										<div class="price">
-											<del>$55.5</del><ins>$49.5</ins>
+
+										<div class="contact-name text-center">
+											<p>UI/UX designer</p>
 										</div>
-										<a href="#" class="btn btn-outline-primary">Read More</a>
+										
+										
+										<div class="price text-center">
+											<h6 class="text-muted"><del>LKR 55,000/=</del></h6><h3>LKR 50,000/=</h3>
+										</div>
+
+										<hr>
+											<div class="pricing-card-body">
+											<div class="pricing-points">
+												<ul>
+													<li>2 TB of space</li>
+													<li>120 days of file recovery</li>
+													<li>Smart Sync</li>
+													<li>Dropbox Paper admin tools</li>
+													<li>Granular sharing permissions</li>
+													<li>User and company-managed groups</li>
+													<li>Live chat support</li>
+												</ul>
+											</div>
+										</div>
+										<hr>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="btn btn-outline-primary">Select Now</a>
+										</div>
 									</div>
 								</div>
 							</li>
+
 							<li class="col-lg-4 col-md-6 col-sm-12">
 								<div class="product-box">
 									<div class="producct-img"><img src="../vendors/images/product-img3.jpg" alt=""></div>
-									<div class="product-caption">
-										<h4><a href="#">Contrast Lace-Up Sneakers</a></h4>
-										<div class="price">
-											<ins>$80</ins>
+									
+									<div class="product-caption text-center">
+										<h4><a href="#">Gufram Bounce Black</a></h4>
+
+										<div class="contact-name text-center">
+											<p>UI/UX designer</p>
 										</div>
-										<a href="#" class="btn btn-outline-primary">Select Now</a>
+										
+										
+										<div class="price text-center">
+											<h6 class="text-muted"><del>LKR 55,000/=</del></h6><h3>LKR 50,000/=</h3>
+										</div>
+
+										<hr>
+											<div class="pricing-card-body">
+											<div class="pricing-points">
+												<ul>
+													<li>2 TB of space</li>
+													<li>120 days of file recovery</li>
+													<li>Smart Sync</li>
+													<li>Dropbox Paper admin tools</li>
+													<li>Granular sharing permissions</li>
+													<li>User and company-managed groups</li>
+													<li>Live chat support</li>
+												</ul>
+											</div>
+										</div>
+										<hr>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="btn btn-outline-primary">Select Now</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+							<li class="col-lg-4 col-md-6 col-sm-12">
+								<div class="product-box">
+									<div class="producct-img"><img src="../vendors/images/product-img4.jpg" alt=""></div>
+									
+									<div class="product-caption text-center">
+										<h4><a href="#">Gufram Bounce Black</a></h4>
+
+										<div class="contact-name text-center">
+											<p>UI/UX designer</p>
+										</div>
+										
+										
+										<div class="price text-center">
+											<h6 class="text-muted"><del>LKR 55,000/=</del></h6><h3>LKR 50,000/=</h3>
+										</div>
+
+										<hr>
+											<div class="pricing-card-body">
+											<div class="pricing-points">
+												<ul>
+													<li>2 TB of space</li>
+													<li>120 days of file recovery</li>
+													<li>Smart Sync</li>
+													<li>Dropbox Paper admin tools</li>
+													<li>Granular sharing permissions</li>
+													<li>User and company-managed groups</li>
+													<li>Live chat support</li>
+												</ul>
+											</div>
+										</div>
+										<hr>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="btn btn-outline-primary">Select Now</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="col-lg-4 col-md-6 col-sm-12">
+								<div class="product-box">
+									<div class="producct-img"><img src="../vendors/images/product-img2.jpg" alt=""></div>
+									
+									<div class="product-caption text-center">
+										<h4><a href="#">Gufram Bounce Black</a></h4>
+
+										<div class="contact-name text-center">
+											<p>UI/UX designer</p>
+										</div>
+										
+										
+										<div class="price text-center">
+											<h6 class="text-muted"><del>LKR 55,000/=</del></h6><h3>LKR 50,000/=</h3>
+										</div>
+
+										<hr>
+											<div class="pricing-card-body">
+											<div class="pricing-points">
+												<ul>
+													<li>2 TB of space</li>
+													<li>120 days of file recovery</li>
+													<li>Smart Sync</li>
+													<li>Dropbox Paper admin tools</li>
+													<li>Granular sharing permissions</li>
+													<li>User and company-managed groups</li>
+													<li>Live chat support</li>
+												</ul>
+											</div>
+										</div>
+										<hr>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="btn btn-outline-primary">Select Now</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="col-lg-4 col-md-6 col-sm-12">
+								<div class="product-box">
+									<div class="producct-img"><img src="../vendors/images/product-img4.jpg" alt=""></div>
+									
+									<div class="product-caption text-center">
+										<h4><a href="#">Gufram Bounce Black</a></h4>
+
+										<div class="contact-name text-center">
+											<p>UI/UX designer</p>
+										</div>
+										
+										
+										<div class="price text-center">
+											<h6 class="text-muted"><del>LKR 55,000/=</del></h6><h3>LKR 50,000/=</h3>
+										</div>
+
+										<hr>
+											<div class="pricing-card-body">
+											<div class="pricing-points">
+												<ul>
+													<li>2 TB of space</li>
+													<li>120 days of file recovery</li>
+													<li>Smart Sync</li>
+													<li>Dropbox Paper admin tools</li>
+													<li>Granular sharing permissions</li>
+													<li>User and company-managed groups</li>
+													<li>Live chat support</li>
+												</ul>
+											</div>
+										</div>
+										<hr>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="btn btn-outline-primary">Select Now</a>
+										</div>
 									</div>
 								</div>
 							</li>
@@ -139,51 +269,232 @@
 							<li class="col-lg-4 col-md-6 col-sm-12">
 								<div class="product-box">
 									<div class="producct-img"><img src="../vendors/images/product-img1.jpg" alt=""></div>
-									<div class="product-caption">
+								
+									<div class="product-caption text-center">
 										<h4><a href="#">Gufram Bounce Black</a></h4>
-										<div class="price">
-											<del>$55.5</del><ins>$49.5</ins>
+
+										<div class="contact-name text-center">
+											<p>UI/UX designer</p>
 										</div>
-										<a href="#" class="btn btn-outline-primary">Read More</a>
+										
+										
+										<div class="price text-center">
+											<h6 class="text-muted"><del>LKR 55,000/=</del></h6><h3>LKR 50,000/=</h3>
+										</div>
+
+										<hr>
+											<div class="pricing-card-body">
+											<div class="pricing-points">
+												<ul>
+													<li>2 TB of space</li>
+													<li>120 days of file recovery</li>
+													<li>Smart Sync</li>
+													<li>Dropbox Paper admin tools</li>
+													<li>Granular sharing permissions</li>
+													<li>User and company-managed groups</li>
+													<li>Live chat support</li>
+												</ul>
+											</div>
+										</div>
+										<hr>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="btn btn-outline-primary">Select Now</a>
+										</div>
 									</div>
 								</div>
 							</li>
-							<li class="col-lg-4 col-md-6 col-sm-12">
-								<div class="product-box">
-									<div class="producct-img"><img src="../vendors/images/product-img2.jpg" alt=""></div>
-									<div class="product-caption">
-										<h4><a href="#">Gufram Bounce White</a></h4>
-										<div class="price">
-											<del>$75.5</del><ins>$50</ins>
-										</div>
-										<a href="#" class="btn btn-outline-primary">Select Now</a>
-									</div>
-								</div>
-							</li>
+
 							<li class="col-lg-4 col-md-6 col-sm-12">
 								<div class="product-box">
 									<div class="producct-img"><img src="../vendors/images/product-img3.jpg" alt=""></div>
-									<div class="product-caption">
-										<h4><a href="#">Contrast Lace-Up Sneakers</a></h4>
-										<div class="price">
-											<ins>$80</ins>
+									
+									<div class="product-caption text-center">
+										<h4><a href="#">Gufram Bounce Black</a></h4>
+
+										<div class="contact-name text-center">
+											<p>UI/UX designer</p>
 										</div>
-										<a href="#" class="btn btn-outline-primary">Select Now</a>
+										
+										
+										<div class="price text-center">
+											<h6 class="text-muted"><del>LKR 55,000/=</del></h6><h3>LKR 50,000/=</h3>
+										</div>
+
+										<hr>
+											<div class="pricing-card-body">
+											<div class="pricing-points">
+												<ul>
+													<li>2 TB of space</li>
+													<li>120 days of file recovery</li>
+													<li>Smart Sync</li>
+													<li>Dropbox Paper admin tools</li>
+													<li>Granular sharing permissions</li>
+													<li>User and company-managed groups</li>
+													<li>Live chat support</li>
+												</ul>
+											</div>
+										</div>
+										<hr>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="btn btn-outline-primary">Select Now</a>
+										</div>
 									</div>
 								</div>
 							</li>
+
+							<li class="col-lg-4 col-md-6 col-sm-12">
+								<div class="product-box">
+									<div class="producct-img"><img src="../vendors/images/product-img1.jpg" alt=""></div>
+									
+									<div class="product-caption text-center">
+										<h4><a href="#">Gufram Bounce Black</a></h4>
+
+										<div class="contact-name text-center">
+											<p>UI/UX designer</p>
+										</div>
+										
+										
+										<div class="price text-center">
+											<h6 class="text-muted"><del>LKR 55,000/=</del></h6><h3>LKR 50,000/=</h3>
+										</div>
+
+										<hr>
+											<div class="pricing-card-body">
+											<div class="pricing-points">
+												<ul>
+													<li>2 TB of space</li>
+													<li>120 days of file recovery</li>
+													<li>Smart Sync</li>
+													<li>Dropbox Paper admin tools</li>
+													<li>Granular sharing permissions</li>
+													<li>User and company-managed groups</li>
+													<li>Live chat support</li>
+												</ul>
+											</div>
+										</div>
+										<hr>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="btn btn-outline-primary">Select Now</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="col-lg-4 col-md-6 col-sm-12">
+								<div class="product-box">
+									<div class="producct-img"><img src="../vendors/images/product-img2.jpg" alt=""></div>
+									
+									<div class="product-caption text-center">
+										<h4><a href="#">Gufram Bounce Black</a></h4>
+
+										<div class="contact-name text-center">
+											<p>UI/UX designer</p>
+										</div>
+										
+										
+										<div class="price text-center">
+											<h6 class="text-muted"><del>LKR 55,000/=</del></h6><h3>LKR 50,000/=</h3>
+										</div>
+
+										<hr>
+											<div class="pricing-card-body">
+											<div class="pricing-points">
+												<ul>
+													<li>2 TB of space</li>
+													<li>120 days of file recovery</li>
+													<li>Smart Sync</li>
+													<li>Dropbox Paper admin tools</li>
+													<li>Granular sharing permissions</li>
+													<li>User and company-managed groups</li>
+													<li>Live chat support</li>
+												</ul>
+											</div>
+										</div>
+										<hr>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="btn btn-outline-primary">Select Now</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
+
+							<li class="col-lg-4 col-md-6 col-sm-12">
+								<div class="product-box">
+									<div class="producct-img"><img src="../vendors/images/product-img3.jpg" alt=""></div>
+								
+									<div class="product-caption text-center">
+										<h4><a href="#">Gufram Bounce Black</a></h4>
+
+										<div class="contact-name text-center">
+											<p>UI/UX designer</p>
+										</div>
+										
+										
+										<div class="price text-center">
+											<h6 class="text-muted"><del>LKR 55,000/=</del></h6><h3>LKR 50,000/=</h3>
+										</div>
+
+										<hr>
+											<div class="pricing-card-body">
+											<div class="pricing-points">
+												<ul>
+													<li>2 TB of space</li>
+													<li>120 days of file recovery</li>
+													<li>Smart Sync</li>
+													<li>Dropbox Paper admin tools</li>
+													<li>Granular sharing permissions</li>
+													<li>User and company-managed groups</li>
+													<li>Live chat support</li>
+												</ul>
+											</div>
+										</div>
+										<hr>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="btn btn-outline-primary">Select Now</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
 							<li class="col-lg-4 col-md-6 col-sm-12">
 								<div class="product-box">
 									<div class="producct-img"><img src="../vendors/images/product-img4.jpg" alt=""></div>
-									<div class="product-caption">
-										<h4><a href="#">Apple Watch Series 3</a></h4>
-										<div class="price">
-											<ins>$380</ins>
+								
+									<div class="product-caption text-center">
+										<h4><a href="#">Gufram Bounce Black</a></h4>
+
+										<div class="contact-name text-center">
+											<p>UI/UX designer</p>
 										</div>
-										<a href="#" class="btn btn-outline-primary">Read More</a>
+										
+										
+										<div class="price text-center">
+											<h6 class="text-muted"><del>LKR 55,000/=</del></h6><h3>LKR 50,000/=</h3>
+										</div>
+
+										<hr>
+											<div class="pricing-card-body">
+											<div class="pricing-points">
+												<ul>
+													<li>2 TB of space</li>
+													<li>120 days of file recovery</li>
+													<li>Smart Sync</li>
+													<li>Dropbox Paper admin tools</li>
+													<li>Granular sharing permissions</li>
+													<li>User and company-managed groups</li>
+													<li>Live chat support</li>
+												</ul>
+											</div>
+										</div>
+										<hr>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="btn btn-outline-primary">Select Now</a>
+										</div>
 									</div>
 								</div>
 							</li>
+							
 						</ul>
 					</div>
 					<div class="blog-pagination mb-30">
@@ -202,7 +513,7 @@
 				</div>
 			</div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
-				DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+				
 			</div>
 		</div>
 	</div>
