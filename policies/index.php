@@ -79,7 +79,7 @@
 										</div>
 										<hr>
 										<div class="d-flex justify-content-center">
-											<a href="#" class="btn btn-outline-primary">Select Now</a>
+											<a href="../policies/policy-details.php" class="btn btn-outline-primary">Select Now</a>
 										</div>
 									</div>
 								</div>
@@ -117,7 +117,7 @@
 										</div>
 										<hr>
 										<div class="d-flex justify-content-center">
-											<a href="#" class="btn btn-outline-primary">Select Now</a>
+											<a href="../policies/policy-details.php" class="btn btn-outline-primary">Select Now</a>
 										</div>
 									</div>
 								</div>
@@ -155,7 +155,7 @@
 										</div>
 										<hr>
 										<div class="d-flex justify-content-center">
-											<a href="#" class="btn btn-outline-primary">Select Now</a>
+											<a href="../policies/policy-details.php" class="btn btn-outline-primary">Select Now</a>
 										</div>
 									</div>
 								</div>
@@ -193,7 +193,7 @@
 										</div>
 										<hr>
 										<div class="d-flex justify-content-center">
-											<a href="#" class="btn btn-outline-primary">Select Now</a>
+											<a href="../policies/policy-details.php" class="btn btn-outline-primary">Select Now</a>
 										</div>
 									</div>
 								</div>

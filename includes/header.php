@@ -18,6 +18,12 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/core.css">
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/icon-font.min.css">
+
+	<!-- Slick Slider css -->
+	<link rel="stylesheet" type="text/css" href="../src/plugins/slick/slick.css">
+	<!-- bootstrap-touchspin css -->
+	<link rel="stylesheet" type="text/css" href="../src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.css">
+
 	<link rel="stylesheet" type="text/css" href="../src/plugins/cropperjs/dist/cropper.css">
 	<link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/dataTables.bootstrap4.min.css">
 	<link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/responsive.bootstrap4.min.css">
