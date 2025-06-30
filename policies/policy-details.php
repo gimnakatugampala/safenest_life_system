@@ -30,7 +30,7 @@
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.html">Policies</a></li>
+									<li class="breadcrumb-item"><a href="../policies/">Policies</a></li>
 									<li class="breadcrumb-item active" aria-current="page">Beginner Package</li>
 								</ol>
 							</nav>
