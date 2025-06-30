@@ -96,13 +96,10 @@
 							<span class="micon dw dw-edit2"></span><span class="mtext">Manage Policies</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="form-basic.html">Form Basic</a></li>
-							<li><a href="advanced-components.html">Advanced Components</a></li>
-							<li><a href="form-wizard.html">Form Wizard</a></li>
-							<li><a href="html5-editor.html">HTML5 Editor</a></li>
-							<li><a href="form-pickers.html">Form Pickers</a></li>
-							<li><a href="image-cropper.html">Image Cropper</a></li>
-							<li><a href="image-dropzone.html">Image Dropzone</a></li>
+							<li><a href="form-basic.html">All Policy Plans</a></li>
+							<li><a href="advanced-components.html">My Policies</a></li>
+							<li><a href="form-wizard.html">Pending Policy Requests</a></li>
+							<li><a href="html5-editor.html">Add Policy Plan</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -110,8 +107,10 @@
 							<span class="micon dw dw-library"></span><span class="mtext">Manage Claims</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="basic-table.html">Basic Tables</a></li>
-							<li><a href="datatable.html">DataTables</a></li>
+							<li><a href="datatable.html">All Claims</a></li>
+							<li><a href="basic-table.html">Pending Claims Request</a></li>
+							<li><a href="basic-table.html">My Claims</a></li>
+							<li><a href="basic-table.html">Request A Claim</a></li>
 						</ul>
 					</li>
 				
@@ -120,20 +119,7 @@
 							<span class="micon dw dw-apartment"></span><span class="mtext"> Manage Customers </span>
 						</a>
 						<ul class="submenu">
-							<li><a href="ui-buttons.html">Buttons</a></li>
-							<li><a href="ui-cards.html">Cards</a></li>
-							<li><a href="ui-cards-hover.html">Cards Hover</a></li>
-							<li><a href="ui-modals.html">Modals</a></li>
-							<li><a href="ui-tabs.html">Tabs</a></li>
-							<li><a href="ui-tooltip-popover.html">Tooltip &amp; Popover</a></li>
-							<li><a href="ui-sweet-alert.html">Sweet Alert</a></li>
-							<li><a href="ui-notification.html">Notification</a></li>
-							<li><a href="ui-timeline.html">Timeline</a></li>
-							<li><a href="ui-progressbar.html">Progressbar</a></li>
-							<li><a href="ui-typography.html">Typography</a></li>
-							<li><a href="ui-list-group.html">List group</a></li>
-							<li><a href="ui-range-slider.html">Range slider</a></li>
-							<li><a href="ui-carousel.html">Carousel</a></li>
+							<li><a href="ui-buttons.html">View All Customers</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
