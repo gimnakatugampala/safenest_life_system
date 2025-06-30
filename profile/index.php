@@ -330,4 +330,10 @@
 
 				</div>
 			</div>
+	
+					<div class="footer-wrap pd-20 mb-20 card-box">
+				</a>
+			</div>
+		</div>
+	</div>
 	<?php include_once '../includes/footer.php'; ?>

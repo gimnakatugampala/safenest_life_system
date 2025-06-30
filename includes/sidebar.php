@@ -96,10 +96,10 @@
 							<span class="micon dw dw-edit2"></span><span class="mtext">Manage Policies</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="form-basic.html">All Policy Plans</a></li>
-							<li><a href="advanced-components.html">My Policies</a></li>
-							<li><a href="form-wizard.html">Pending Policy Requests</a></li>
-							<li><a href="html5-editor.html">Add Policy Plan</a></li>
+							<li><a href="../policies/">All Policy Plans</a></li>
+							<li><a href="../policies/my-policies.php">My Policies</a></li>
+							<li><a href="../policies/pending-policy-requests.php">Pending Policy Requests</a></li>
+							<li><a href="../policies/add-policy.php">Add Policy Plan</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
