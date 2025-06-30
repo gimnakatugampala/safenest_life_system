@@ -119,7 +119,7 @@
 							<span class="micon dw dw-apartment"></span><span class="mtext"> Manage Customers </span>
 						</a>
 						<ul class="submenu">
-							<li><a href="ui-buttons.html">View All Customers</a></li>
+							<li><a href="../customers/">View All Customers</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
