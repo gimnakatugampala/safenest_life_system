@@ -26,12 +26,12 @@
 					<div class="row">
 						<div class="col-md-12 col-sm-12">
 							<div class="title">
-								<h4>Product Detail</h4>
+								<h4>Policy Details</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Product Detail</li>
+									<li class="breadcrumb-item"><a href="index.html">Policies</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Beginner Package</li>
 								</ol>
 							</nav>
 						</div>
