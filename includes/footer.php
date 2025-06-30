@@ -32,6 +32,9 @@
 	<script src="../src/plugins/sweetalert2/sweetalert2.all.js"></script>
 	<script src="../src/plugins/sweetalert2/sweet-alert.init.js"></script>
 
+		<script src="../src/plugins/jquery-steps/jquery.steps.js"></script>
+	<script src="../vendors/scripts/steps-setting.js"></script>
+
 	<script>
 		jQuery(document).ready(function() {
 			jQuery('.product-slider').slick({
