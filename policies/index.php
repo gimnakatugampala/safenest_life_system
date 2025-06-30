@@ -24,17 +24,26 @@
 					<div class="row">
 						<div class="col-md-12 col-sm-12">
 							<div class="title">
-								<h4>Product</h4>
+								<h4>Policies</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Product</li>
+									<li class="breadcrumb-item"><a href="index.html">Policies</a></li>
+									<li class="breadcrumb-item active" aria-current="page">All Policies</li>
 								</ol>
 							</nav>
 						</div>
 					</div>
 				</div>
+
+				<div class="header-search">
+				<form>
+					<div class="form-group mb-4">
+						<input type="text" class="form-control search-input" placeholder="Search Here">
+					</div>
+				</form>
+			</div>
+
 				<div class="product-wrap">
 					<div class="product-list">
 						<ul class="row">
@@ -494,7 +503,7 @@
 									</div>
 								</div>
 							</li>
-							
+
 						</ul>
 					</div>
 					<div class="blog-pagination mb-30">
