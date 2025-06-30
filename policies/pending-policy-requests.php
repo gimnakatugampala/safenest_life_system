@@ -50,7 +50,7 @@
 									<th>Amount</th>
 									<th>Duration</th>
 									<th>Age Limit</th>
-									<th>Requested Date</th>
+									<th>Req Date</th>
 									<th>Status</th>
 									<th>Actions</th>
 								</tr>
@@ -63,8 +63,12 @@
 									<td>Sagittarius</td>
 									<td>45-90 </td>
 									<td>29-03-2018</td>
-									<td><span class="badge badge-pill badge-primary">Primary</span></td>
-									<td>$162,700</td>
+									<td><span class="badge badge-pill badge-primary">Pending</span></td>
+									<td>
+                                        <button type="button" class="btn btn-primary btn-sm"><span class="icon-copy ti-eye"></span></button>
+                                        <button type="button" class="btn btn-success btn-sm"><span class="icon-copy ti-check"></span></button>
+                                        <button type="button" class="btn btn-danger btn-sm"><span class="icon-copy ti-close"></span></button>
+                                    </td>
 								</tr>
 							
 							</tbody>
