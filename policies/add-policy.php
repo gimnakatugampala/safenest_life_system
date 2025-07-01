@@ -42,152 +42,73 @@
 						<h4 class="text-blue h4">Step wizard</h4>
 						<p class="mb-30">jQuery Step wizard</p>
 					</div> -->
-					<div class="wizard-content">
-						<form class="tab-wizard wizard-circle wizard">
-							<h5>Personal Info</h5>
-							<section>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label >First Name :</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label >Last Name :</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<label>Full Name :</label>
-											<input type="email" class="form-control">
-										</div>
-									</div>
-									
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Age :</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
 
-									<div class="col-md-6">
-										<div class="form-group">
-											<label >Date of Birth :</label>
-											<input type="text" class="form-control date-picker" placeholder="Select Date">
-										</div>
-									</div>
-								</div>
-							</section>
-							<!-- Step 2 -->
-							<h5>Policy Details</h5>
-							<section>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Policy Plan:</label>
-											<select disabled class="custom-select col-12">
-												<option selected="">Beginner</option>
-												<option value="1">One</option>
-												<option value="2">Two</option>
-												<option value="3">Three</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Term/ Duration :</label>
-											<select disabled class="custom-select col-12">
-												<option selected="">10 Years</option>
-												<option value="1">One</option>
-												<option value="2">Two</option>
-												<option value="3">Three</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Premium :</label>
-											<select disabled class="custom-select col-12">
-												<option selected="">LKR 2,000 / month</option>
-												<option value="1">One</option>
-												<option value="2">Two</option>
-												<option value="3">Three</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Eligibility :</label>
-											<select disabled class="custom-select col-12">
-												<option selected="">18–50</option>
-												<option value="1">One</option>
-												<option value="2">Two</option>
-												<option value="3">Three</option>
-											</select>
-										</div>
-									</div>
-									
-								</div>
-							</section>
-							<!-- Step 3 -->
-							<h5>Nominee Info</h5>
-							<section>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<label>Full Name :</label>
-											<input type="text" class="form-control">
-										</div>
-									
-									</div>
-									<div class="col-md-6">
-											<div class="form-group">
-											<label>Relation :</label>
-											<select class="form-control">
-												<option>Normal</option>
-												<option>Difficult</option>
-												<option>Hard</option>
-											</select>
-										</div>
-									</div>
-										<div class="col-md-6">
-										<div class="form-group">
-											<label>Age :</label>
-											<input type="text" class="form-control" placeholder="Age">
-										</div>
-									</div>
-								</div>
-							</section>
-							<!-- Step 4 -->
-							<h5>Declaration</h5>
-							<section>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<label>Comments (optional)</label>
-											<textarea class="form-control"></textarea>
-										</div>
-									</div>
+					<div class="row">
 
-									<div class="col-md-12">
-									<div class="custom-control custom-checkbox mb-5">
-										<input type="checkbox" class="custom-control-input" id="customCheck1">
-										<label class="custom-control-label" for="customCheck1">I accept the Terms and Conditions</label>
-									</div>
-									</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+							<label>Policy Name</label>
+							<input class="form-control" type="text" >
+						</div>
+						</div>
 
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+							<label>Policy Term (Years)</label>
+							<input class="form-control" type="number" >
+						</div>
+						</div>
 
-								</div>
-							</section>
-						</form>
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+							<label>Premium Amount</label>
+							<input class="form-control" type="number" >
+						</div>
+						</div>
+
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+							<label>Coverage Amount</label>
+							<input class="form-control" type="number" >
+						</div>
+						</div>
+
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+							<label>Eligibility (Min Age)</label>
+							<input class="form-control" type="number" >
+						</div>
+						</div>
+
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+							<label>Eligibility (Max Age)</label>
+							<input class="form-control" type="number" >
+						</div>
+						</div>
+
+						<div class="col-md-12 col-sm-12">
+							<div class="form-group">
+							<label>Description / Details</label>
+							<textarea class="form-control"></textarea>
+						</div>
+						</div>
+
+						<div class="col-md-12 col-sm-12">
+						<div class="form-group">
+							<label>Benefits & Features</label>
+							<ul id="benefits-list" class="list-unstyled">
+								<li class="d-flex mb-2">
+									<input type="text" name="benefits[]" class="form-control me-2" placeholder="Enter a benefit">
+									<button type="button" class="btn btn-danger btn-sm" onclick="removeBenefit(this)"><i class="icon-copy ion-close"></i></button>
+								</li>
+							</ul>
+							<button type="button" class="btn btn-primary btn-sm" onclick="addBenefit()"><i class="icon-copy ion-plus-round"></i></button>
+						</div>
 					</div>
+
+					</div>
+
 				</div>
 
 				
@@ -214,6 +135,25 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+  function addBenefit() {
+    const ul = document.getElementById("benefits-list");
+    const li = document.createElement("li");
+    li.className = "d-flex mb-2";
+    li.innerHTML = `
+      <input type="text" name="benefits[]" class="form-control me-2" placeholder="Enter a benefit">
+      <button type="button" class="btn btn-danger btn-sm" onclick="removeBenefit(this)"><i class="icon-copy ion-close"></i></button>
+    `;
+    ul.appendChild(li);
+  }
+
+  function removeBenefit(button) {
+    const li = button.parentElement;
+    li.remove();
+  }
+</script>
+
 
 
 	<?php include_once '../includes/footer.php'; ?>

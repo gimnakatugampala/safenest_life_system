@@ -24,12 +24,12 @@
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>Add Policy</h4>
+								<h4>Policy Application Form</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index.html">Policies</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Add Policy</li>
+									<li class="breadcrumb-item active" aria-current="page">Policy Application Form</li>
 								</ol>
 							</nav>
 						</div>
