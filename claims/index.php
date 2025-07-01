@@ -49,10 +49,11 @@
 									<th class="table-plus datatable-nosort">Amount</th>
 									<th class="table-plus datatable-nosort">Claimed By</th>
 									<th class="table-plus datatable-nosort">Nominee</th>
+                                    <th class="table-plus datatable-nosort">Requested Date</th>
 									<th>Comment</th>
 									<th>Status</th>
 									<th>Policy</th>
-									<th>Actions</th>
+									
 								</tr>
 							</thead>
 							<tbody>
@@ -61,13 +62,10 @@
 									<td>30,000</td>
 									<td>K D K Gimna</td>
 									<td>Kavishka</td>
+									<td>2025-08-08</td>
 									<td>Lorem ipsum ..</td>
 									<td><span class="badge badge-pill badge-info">Pending</span></td>
 									<td>Beginner</td>
-									<td>
-                                         <button id="sa-params" type="button" class="btn btn-success btn-sm"><span class="icon-copy ti-check"></span></button>
-                                        <button id="sa-warning" type="button" class="btn btn-danger btn-sm"><span class="icon-copy ti-close"></span></button>
-                                    </td>
 								</tr>
 							
 							</tbody>
