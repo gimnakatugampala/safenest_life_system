@@ -74,16 +74,10 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xl-8 mb-30">
+				<div class="col-xl-12 mb-30">
 					<div class="card-box height-100-p pd-20">
 						<h2 class="h4 mb-20">Policy Requests</h2>
 						<div id="chart5"></div>
-					</div>
-				</div>
-				<div class="col-xl-4 mb-30">
-					<div class="card-box height-100-p pd-20">
-						<h2 class="h4 mb-20">Lead Target</h2>
-						<div id="chart6"></div>
 					</div>
 				</div>
 			</div>
