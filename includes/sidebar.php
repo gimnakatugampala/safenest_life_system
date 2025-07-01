@@ -127,11 +127,8 @@
 							<span class="micon dw dw-paint-brush"></span><span class="mtext">Manage Admins</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="font-awesome.html">FontAwesome Icons</a></li>
-							<li><a href="foundation.html">Foundation Icons</a></li>
-							<li><a href="ionicons.html">Ionicons Icons</a></li>
-							<li><a href="themify.html">Themify Icons</a></li>
-							<li><a href="custom-icon.html">Custom Icons</a></li>
+							<li><a href="../admins/">Admins</a></li>
+							<li><a href="../admins/">Add Admins</a></li>
 						</ul>
 					</li>
 					<!-- <li class="dropdown">
