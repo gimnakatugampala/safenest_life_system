@@ -45,6 +45,32 @@
 
 					<div class="row">
 
+					<div class="col-md-12 col-sm-12"><label>Images</label></div>
+					<div class="col-md-4 col-sm-12 mb-3">
+
+					<form class="dropzone" action="#" id="my-awesome-dropzone">
+						<div class="fallback">
+							<input type="file" name="file" />
+						</div>
+					</form>
+					</div>
+
+					<div class="col-md-4 col-sm-12 mb-3">
+					<form class="dropzone" action="#" id="my-awesome-dropzone">
+						<div class="fallback">
+							<input type="file" name="file" />
+						</div>
+					</form>
+					</div>
+
+					<div class="col-md-4 col-sm-12 mb-3">
+					<form class="dropzone" action="#" id="my-awesome-dropzone">
+						<div class="fallback">
+							<input type="file" name="file" />
+						</div>
+					</form>
+					</div>
+
 						<div class="col-md-6 col-sm-12">
 							<div class="form-group">
 							<label>Policy Name</label>
@@ -106,6 +132,13 @@
 							<button type="button" class="btn btn-primary btn-sm" onclick="addBenefit()"><i class="icon-copy ion-plus-round"></i></button>
 						</div>
 					</div>
+
+					
+					<div class="col-md-12 text-center">
+						<button type="button" class="btn btn-primary">Add Policy</button>
+					</div>
+					
+
 
 					</div>
 

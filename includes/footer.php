@@ -35,6 +35,8 @@
 		<script src="../src/plugins/jquery-steps/jquery.steps.js"></script>
 	<script src="../vendors/scripts/steps-setting.js"></script>
 
+	<script src="../src/plugins/dropzone/src/dropzone.js"></script>
+
 	<script>
 		jQuery(document).ready(function() {
 			jQuery('.product-slider').slick({
@@ -92,6 +94,18 @@
 				canvasData = cropper.getCanvasData();
 				cropper.destroy();
 			});
+		});
+	</script>
+
+		<script>
+		Dropzone.autoDiscover = false;
+		$(".dropzone").dropzone({
+			addRemoveLinks: true,
+			removedfile: function(file) {
+				var name = file.name;
+				var _ref;
+				return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
+			}
 		});
 	</script>
 </body>
