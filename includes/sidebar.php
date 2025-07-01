@@ -107,10 +107,10 @@
 							<span class="micon dw dw-library"></span><span class="mtext">Manage Claims</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="datatable.html">All Claims</a></li>
-							<li><a href="basic-table.html">Pending Claims Request</a></li>
-							<li><a href="basic-table.html">My Claims</a></li>
-							<li><a href="basic-table.html">Request A Claim</a></li>
+							<li><a href="../claims/">All Claims</a></li>
+							<li><a href="../claims/pending-claim-requests.php">Pending Claims Request</a></li>
+							<li><a href="../claims/my-claims.php">My Claims</a></li>
+							<li><a href="../claims/add-claims.php">Request A Claim</a></li>
 						</ul>
 					</li>
 				
