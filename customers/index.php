@@ -45,30 +45,22 @@
 						<table class="table hover multiple-select-row data-table-export nowrap">
 							<thead>
 								<tr>
-									<th class="table-plus datatable-nosort">Policy Name</th>
-									<th class="table-plus datatable-nosort">Customer Name</th>
-									<th>Amount</th>
-									<th>Duration</th>
-									<th>Age Limit</th>
-									<th>Req Date</th>
-									<th>Status</th>
-									<th>Actions</th>
+                                    <th class="table-plus datatable-nosort">Customer Name</th>
+									<th class="table-plus datatable-nosort">DOB</th>
+									<th>Nominee</th>
+									<th>Policy Name</th>
+									<th>Contact Number</th>
+									<th>Email</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td class="table-plus">Beginner</td>
-									<td>Gimna Katugampala</td>
-									<td>25</td>
-									<td>Sagittarius</td>
-									<td>45-90 </td>
-									<td>29-03-2018</td>
-									<td><span class="badge badge-pill badge-info">Pending</span></td>
-									<td>
-                                        <button data-toggle="modal" data-target="#bd-example-modal-lg" type="button" class="btn btn-primary btn-sm"><span class="icon-copy ti-eye"></span></button>
-                                        <button id="sa-params" type="button" class="btn btn-success btn-sm"><span class="icon-copy ti-check"></span></button>
-                                        <button id="sa-warning" type="button" class="btn btn-danger btn-sm"><span class="icon-copy ti-close"></span></button>
-                                    </td>
+									<td class="table-plus">Gimna Katugampala</td>
+									<td>2000-06-20</td>
+									<td>Kavishka</td>
+									<td>Beginner</td>
+									<td>+94 764961707 </td>
+									<td>gimnakatugampala1@gmail.com</td>
 								</tr>
 							
 							</tbody>
