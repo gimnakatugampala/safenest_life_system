@@ -128,7 +128,7 @@
 						</a>
 						<ul class="submenu">
 							<li><a href="../admins/">Admins</a></li>
-							<li><a href="../admins/">Add Admins</a></li>
+							<li><a href="../admins/add-admins.php">Add Admins</a></li>
 						</ul>
 					</li>
 					<!-- <li class="dropdown">
