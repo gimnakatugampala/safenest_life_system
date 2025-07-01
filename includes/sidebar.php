@@ -75,7 +75,7 @@
 
 	<div class="left-side-bar">
 		<div class="brand-logo">
-			<a href="index.html">
+			<a href="../dashboard/">
 				<img src="../vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
 				<img src="../vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
 			</a>
