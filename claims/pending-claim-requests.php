@@ -67,7 +67,7 @@
 									<td><span class="badge badge-pill badge-info">Pending</span></td>
 									<td>Beginner</td>
 									<td>
-                                         <button id="sa-params" type="button" class="btn btn-primary btn-sm"><span class="icon-copy ti-check"></span></button>
+                                         <button data-toggle="modal" data-target="#bd-example-modal-lg"  type="button" class="btn btn-primary btn-sm"><i class="icon-copy fa fa-eye" aria-hidden="true"></i></button>
                                          <button id="sa-params" type="button" class="btn btn-success btn-sm"><span class="icon-copy ti-check"></span></button>
                                         <button id="sa-warning" type="button" class="btn btn-danger btn-sm"><span class="icon-copy ti-close"></span></button>
                                     </td>
