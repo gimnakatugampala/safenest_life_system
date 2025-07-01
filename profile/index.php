@@ -113,72 +113,48 @@
 														<li class="weight-500 col-md-12">
 															<!-- <h4 class="text-blue h5 mb-20">Edit Your Personal Setting</h4> -->
 															<div class="form-group">
-																<label>Full Name</label>
-																<input class="form-control form-control-lg" type="text">
+																<label><b>Full Name</b></label>
+																<p class="m-0 p-0">K D K Gimna Katugampala</p>
 															</div>
 															<div class="form-group">
-																<label>Title</label>
-																<input class="form-control form-control-lg" type="text">
+																<label><b>Occupation</b></label>
+																<p class="m-0 p-0">Software Engineer</p>
 															</div>
 															<div class="form-group">
-																<label>Email</label>
-																<input class="form-control form-control-lg" type="email">
+																<label><b>Email</b></label>
+																<p class="m-0 p-0">gimnakatugampala1@gmail.com</p>
 															</div>
 															<div class="form-group">
-																<label>Date of birth</label>
-																<input class="form-control form-control-lg date-picker" type="text">
+																<label><b>Date of birth</b></label>
+																<p class="m-0 p-0">2000-06-20</p>
 															</div>
 															<div class="form-group">
-																<label>Gender</label>
-																<div class="d-flex">
-																<div class="custom-control custom-radio mb-5 mr-20">
-																	<input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-																	<label class="custom-control-label weight-400" for="customRadio4">Male</label>
-																</div>
-																<div class="custom-control custom-radio mb-5">
-																	<input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
-																	<label class="custom-control-label weight-400" for="customRadio5">Female</label>
-																</div>
-																</div>
+																<label><b>Gender</b></label>
+																<p class="m-0 p-0">Male</p>
 															</div>
 															<div class="form-group">
-																<label>Country</label>
-																<select class="selectpicker form-control form-control-lg" data-style="btn-outline-secondary btn-lg" title="Not Chosen">
-																	<option>United States</option>
-																	<option>India</option>
-																	<option>United Kingdom</option>
-																</select>
+																<label><b>Country</b></label>
+																<p class="m-0 p-0">Sri Lanka</p>
 															</div>
 															<div class="form-group">
-																<label>State/Province/Region</label>
-																<input class="form-control form-control-lg" type="text">
+																<label><b>State/Province/Region</b></label>
+																<p class="m-0 p-0">Western Province</p>
 															</div>
 															<div class="form-group">
-																<label>Postal Code</label>
-																<input class="form-control form-control-lg" type="text">
+																<label><b>Postal Code</b></label>
+																<p class="m-0 p-0">10600</p>
 															</div>
 															<div class="form-group">
-																<label>Phone Number</label>
-																<input class="form-control form-control-lg" type="text">
+																<label><b>Phone Number</b></label>
+																<p class="m-0 p-0">94 764961707</p>
 															</div>
 															<div class="form-group">
-																<label>Address</label>
-																<textarea class="form-control"></textarea>
+																<label><b>Address</b></label>
+																<p class="m-0 p-0">393/5, Awissawella Road Megoda Kolonnawa , Wellampitiya, Colombo.</p>
 															</div>
-															<div class="form-group">
-																<label>Visa Card Number</label>
-																<input class="form-control form-control-lg" type="text">
-															</div>
-															<div class="form-group">
-																<label>Paypal ID</label>
-																<input class="form-control form-control-lg" type="text">
-															</div>
-															<div class="form-group">
-																<div class="custom-control custom-checkbox mb-5">
-																	<input type="checkbox" class="custom-control-input" id="customCheck1-1">
-																	<label class="custom-control-label weight-400" for="customCheck1-1">I agree to receive notification emails</label>
-																</div>
-															</div>
+														
+														
+													
 															<div class="form-group mb-0">
 																<input type="submit" class="btn btn-primary" value="Update Information">
 															</div>
