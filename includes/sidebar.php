@@ -99,6 +99,7 @@
 							<li><a href="../policies/">All Policy Plans</a></li>
 							<li><a href="../policies/my-policies.php">My Policies</a></li>
 							<li><a href="../policies/pending-policy-requests.php">Pending Policy Requests</a></li>
+							<li><a href="../policies/policy-application-form.php">Policy Application Form *</a></li>
 							<li><a href="../policies/add-policy.php">Add Policy Plan</a></li>
 						</ul>
 					</li>
