@@ -87,7 +87,7 @@
 			<div class="sidebar-menu">
 				<ul id="accordion-menu">
 					<li>
-						<a href="sitemap.html" class="dropdown-toggle no-arrow">
+						<a href="../dashboard/" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-diagram"></span><span class="mtext">Dashboard</span>
 						</a>
 					</li>
