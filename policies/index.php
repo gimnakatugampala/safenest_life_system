@@ -46,8 +46,8 @@
 
 				<div class="product-wrap">
 					<div class="product-list">
-						<ul class="row">
-							<li class="col-lg-4 col-md-6 col-sm-12">
+						 <ul id="policy-list" class="row">
+							<!-- <li class="col-lg-4 col-md-6 col-sm-12">
 								<div class="product-box">
 									<div class="producct-img"><img src="../vendors/images/product-img1.jpg" alt=""></div>
 
@@ -502,7 +502,7 @@
 										</div>
 									</div>
 								</div>
-							</li>
+							</li> -->
 
 						</ul>
 					</div>
@@ -527,4 +527,5 @@
 		</div>
 	</div>
 
+	<script src="../scripts/all_policies.js"></script>
 	<?php include_once '../includes/footer.php'; ?>
