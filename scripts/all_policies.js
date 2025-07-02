@@ -9,6 +9,83 @@
 
 $(function () {
 
+    
+  /* SETTINGS */
+  const pageSize = 9;               // cards per page
+
+  /* wait until cards are rendered by policies_list.js */
+  $(document).on("cards:ready", function () {
+    paginate();
+  });
+
+  /* re‑paginate after search filter */
+  $("#policySearch").on("input", function () {
+    paginate();
+  });
+
+  function paginate() {
+    const $cards = $(".policy-card:visible");
+    const total  = $cards.length;
+    const pages  = Math.ceil(total / pageSize) || 1;
+    const $pager = $("#pager").empty();
+
+    /* if only one page, hide pagination */
+    if (pages <= 1) return;
+
+    // helper to build a button
+    const btn = (label, page, disabled = false, current = false) =>
+      $(`<a href='#' class='btn ${current ? "btn-primary current" : "btn-outline-primary"} ${disabled ? "disabled" : ""}' data-page='${page}'>${label}</a>`);
+
+    /* PREV */
+    $pager.append(btn("<i class='fa fa-angle-double-left'></i>", 1, true).addClass("prev"));
+
+    /* Page numbers */
+    for (let i = 1; i <= pages; i++) {
+      $pager.append(btn(i, i, false, i === 1));
+    }
+
+    /* NEXT */
+    $pager.append(btn("<i class='fa fa-angle-double-right'></i>", pages, true).addClass("next"));
+
+    showPage(1);
+
+    /* click handler */
+    $pager.find("a").off("click").on("click", function (e) {
+      e.preventDefault();
+      if ($(this).hasClass("disabled")) return;
+      const page = +$(this).data("page");
+      showPage(page);
+    });
+  }
+
+  function showPage(page) {
+    const $cards = $(".policy-card:visible");
+    const start  = (page - 1) * pageSize;
+    const end    = start + pageSize - 1;
+
+    $cards.each(function (idx) {
+      $(this).toggle(idx >= start && idx <= end);
+    });
+
+    /* update active button */
+    $("#pager a").removeClass("btn-primary current")
+                 .addClass("btn-outline-primary");
+    $(`#pager a[data-page='${page}']`)
+        .addClass("btn-primary current")
+        .removeClass("btn-outline-primary");
+
+    /* enable / disable prev/next */
+    $("#pager .prev").toggleClass("disabled", page === 1)
+                     .data("page", page - 1);
+    $("#pager .next").toggleClass("disabled", page ===
+                                  $("#pager a[data-page]").length)
+                     .data("page", page + 1);
+  }
+
+  /* Trigger once after policies load */
+  $(document).trigger("cards:ready");
+
+
   // ─────────────────────────────────────────
   //  FETCH & RENDER
   // ─────────────────────────────────────────
@@ -103,4 +180,7 @@ $(function () {
       $(this).toggle(match);
     });
   });
+
+
+  
 });

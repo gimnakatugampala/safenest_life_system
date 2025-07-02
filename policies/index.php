@@ -36,13 +36,22 @@
 					</div>
 				</div>
 
+				
 				<div class="header-search">
-				<form>
-					<div class="form-group mb-4">
-						<input type="text" class="form-control search-input" placeholder="Search Here">
+				<form onsubmit="return false;">           
+					<div class="form-group mb-4 position-relative">
+					<input type="text"
+							id="policySearch"                    
+							class="form-control search-input"
+							placeholder="Search policies…">
+
+					<!-- optional search icon -->
+					<i class="fa fa-search position-absolute"
+						style="right:12px;top:50%;transform:translateY(-50%);opacity:.5;"></i>
 					</div>
 				</form>
-			</div>
+				</div>
+
 
 				<div class="product-wrap">
 					<div class="product-list">
@@ -506,19 +515,13 @@
 
 						</ul>
 					</div>
-					<div class="blog-pagination mb-30">
-						<div class="btn-toolbar justify-content-center mb-15">
-							<div class="btn-group">
-								<a href="#" class="btn btn-outline-primary prev"><i class="fa fa-angle-double-left"></i></a>
-								<a href="#" class="btn btn-outline-primary">1</a>
-								<a href="#" class="btn btn-outline-primary">2</a>
-								<span class="btn btn-primary current">3</span>
-								<a href="#" class="btn btn-outline-primary">4</a>
-								<a href="#" class="btn btn-outline-primary">5</a>
-								<a href="#" class="btn btn-outline-primary next"><i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div>
-					</div>
+				<!-- pagination container -->
+				<div class="blog-pagination mb-30">
+				<div class="btn-toolbar justify-content-center mb-15">
+					<div id="pager" class="btn-group"></div>   <!-- JS injects buttons here -->
+				</div>
+				</div>
+
 				</div>
 			</div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
