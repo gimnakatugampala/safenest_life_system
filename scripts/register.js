@@ -31,10 +31,26 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   submitBtn.addEventListener("click", function () {
-    console.log("Submitting form...");
-    form.submit();
+    const formData = new FormData(form);
+
+    fetch("../api/api_register.php", {
+      method: "POST",
+      body: formData
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          alert("Registration successful!");
+          window.location.href = "../auth/login.php";
+        } else {
+          alert("Error: " + data.message);
+        }
+      })
+      .catch(err => {
+        console.error("Error:", err);
+        alert("Something went wrong.");
+      });
   });
 
-  // Initialize first step
   showStep(currentStep);
 });

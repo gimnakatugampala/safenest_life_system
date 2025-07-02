@@ -24,20 +24,22 @@
 										<div class="form-group row">
 											<label class="col-sm-4 col-form-label">Email Address*</label>
 											<div class="col-sm-8">
-												<input type="email" class="form-control">
+												<input type="email" name="email" class="form-control" required>
+
 											</div>
 										</div>
 
 										<div class="form-group row">
 											<label class="col-sm-4 col-form-label">Password*</label>
 											<div class="col-sm-8">
-												<input type="password" class="form-control">
+												<input type="password" name="password" class="form-control" required>
 											</div>
 										</div>
 										<div class="form-group row">
 											<label class="col-sm-4 col-form-label">Confirm Password*</label>
 											<div class="col-sm-8">
-												<input type="password" class="form-control">
+												<input type="password" name="confirm_password" class="form-control" required>
+
 											</div>
 										</div>
 									</div>
@@ -49,18 +51,18 @@
 										<div class="form-group row">
 											<label class="col-sm-4 col-form-label">Full Name*</label>
 											<div class="col-sm-8">
-												<input type="text" class="form-control">
+												<input type="text" name="full_name" class="form-control" required>
 											</div>
 										</div>
 										<div class="form-group row align-items-center">
 											<label class="col-sm-4 col-form-label">Gender*</label>
 											<div class="col-sm-8">
 												<div class="custom-control custom-radio custom-control-inline pb-0">
-													<input type="radio" id="male" name="gender" class="custom-control-input">
+													<input type="radio" name="gender" value="1" id="male" class="custom-control-input">
 													<label class="custom-control-label" for="male">Male</label>
 												</div>
 												<div class="custom-control custom-radio custom-control-inline pb-0">
-													<input type="radio" id="female" name="gender" class="custom-control-input">
+												<input type="radio" name="gender" value="2" id="female" class="custom-control-input">
 													<label class="custom-control-label" for="female">Female</label>
 												</div>
 											</div>
@@ -68,13 +70,15 @@
 										<div class="form-group row">
 											<label class="col-sm-4 col-form-label">City</label>
 											<div class="col-sm-8">
-												<input type="text" class="form-control">
+												<input type="text" name="city" class="form-control">
+
 											</div>
 										</div>
 										<div class="form-group row">
 											<label class="col-sm-4 col-form-label">State</label>
 											<div class="col-sm-8">
-												<input type="text" class="form-control">
+												<input type="text" name="state" class="form-control">
+
 											</div>
 										</div>
 									</div>
