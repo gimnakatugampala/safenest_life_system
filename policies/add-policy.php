@@ -43,80 +43,68 @@
 						<p class="mb-30">jQuery Step wizard</p>
 					</div> -->
 
+					<form id="formPolicy" enctype="multipart/form-data">
 					<div class="row">
+						<div class="col-md-12 col-sm-12"><label>Images</label></div>
 
-					<div class="col-md-12 col-sm-12"><label>Images</label></div>
-					<div class="col-md-4 col-sm-12 mb-3">
-
-					<form class="dropzone" action="#" id="my-awesome-dropzone">
-						<div class="fallback">
-							<input type="file" name="file" />
+						<div class="col-md-4 col-sm-12 mb-3">
+						 <input type="file" name="images[]" accept="image/*" multiple required>
 						</div>
-					</form>
-					</div>
 
-					<div class="col-md-4 col-sm-12 mb-3">
-					<form class="dropzone" action="#" id="my-awesome-dropzone">
-						<div class="fallback">
-							<input type="file" name="file" />
+						<div class="col-md-4 col-sm-12 mb-3">
+					 <input type="file" name="images[]" accept="image/*" multiple required>
 						</div>
-					</form>
-					</div>
 
-					<div class="col-md-4 col-sm-12 mb-3">
-					<form class="dropzone" action="#" id="my-awesome-dropzone">
-						<div class="fallback">
-							<input type="file" name="file" />
+						<div class="col-md-4 col-sm-12 mb-3">
+						 <input type="file" name="images[]" accept="image/*" multiple required>
 						</div>
-					</form>
-					</div>
 
 						<div class="col-md-6 col-sm-12">
-							<div class="form-group">
+						<div class="form-group">
 							<label>Policy Name</label>
-							<input class="form-control" type="text" >
+							<input class="form-control" type="text" name="policy_name" required>
 						</div>
 						</div>
 
 						<div class="col-md-6 col-sm-12">
-							<div class="form-group">
+						<div class="form-group">
 							<label>Policy Term (Years)</label>
-							<input class="form-control" type="number" >
+							<input class="form-control" type="number" name="term_years" required>
 						</div>
 						</div>
 
 						<div class="col-md-6 col-sm-12">
-							<div class="form-group">
+						<div class="form-group">
 							<label>Premium Amount</label>
-							<input class="form-control" type="number" >
+							<input class="form-control" type="number" name="premium_amount" required>
 						</div>
 						</div>
 
 						<div class="col-md-6 col-sm-12">
-							<div class="form-group">
+						<div class="form-group">
 							<label>Coverage Amount</label>
-							<input class="form-control" type="number" >
+							<input class="form-control" type="number" name="coverage_amount" required>
 						</div>
 						</div>
 
 						<div class="col-md-6 col-sm-12">
-							<div class="form-group">
+						<div class="form-group">
 							<label>Eligibility (Min Age)</label>
-							<input class="form-control" type="number" >
+							<input class="form-control" type="number" name="min_age" required>
 						</div>
 						</div>
 
 						<div class="col-md-6 col-sm-12">
-							<div class="form-group">
+						<div class="form-group">
 							<label>Eligibility (Max Age)</label>
-							<input class="form-control" type="number" >
+							<input class="form-control" type="number" name="max_age" required>
 						</div>
 						</div>
 
 						<div class="col-md-12 col-sm-12">
-							<div class="form-group">
+						<div class="form-group">
 							<label>Description / Details</label>
-							<textarea class="form-control"></textarea>
+							<textarea class="form-control" name="description" required></textarea>
 						</div>
 						</div>
 
@@ -124,23 +112,20 @@
 						<div class="form-group">
 							<label>Benefits & Features</label>
 							<ul id="benefits-list" class="list-unstyled">
-								<li class="d-flex mb-2">
-									<input type="text" name="benefits[]" class="form-control me-2" placeholder="Enter a benefit">
-									<button type="button" class="btn btn-danger btn-sm" onclick="removeBenefit(this)"><i class="icon-copy ion-close"></i></button>
-								</li>
+							<li class="d-flex mb-2">
+								<input type="text" name="benefits[]" class="form-control me-2" placeholder="Enter a benefit">
+								<button type="button" class="btn btn-danger btn-sm" onclick="removeBenefit(this)"><i class="icon-copy ion-close"></i></button>
+							</li>
 							</ul>
 							<button type="button" class="btn btn-primary btn-sm" onclick="addBenefit()"><i class="icon-copy ion-plus-round"></i></button>
 						</div>
-					</div>
+						</div>
 
-					
-					<div class="col-md-12 text-center">
-						<button type="button" class="btn btn-primary">Add Policy</button>
+						<div class="col-md-12 text-center">
+						<button type="button" id="addPolicyBtn" class="btn btn-primary">Add Policy</button>
+						</div>
 					</div>
-					
-
-
-					</div>
+					</form>
 
 				</div>
 
@@ -187,6 +172,6 @@
   }
 </script>
 
-
+<script src="../scripts/add_policy.js"></script>
 
 	<?php include_once '../includes/footer.php'; ?>
