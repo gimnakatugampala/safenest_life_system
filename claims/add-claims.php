@@ -68,19 +68,7 @@
                             </div>
 							
 
-                               <div class="col-md-12">
-                                <div class="form-group">
-                                    <label class="col-sm-12 col-md-12 col-form-label">Select Nominee</label>
-                                    	<div class="col-sm-12 col-md-12">
-                                        <select class="custom-select col-12">
-                                            <option selected="">Choose...</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-							        </div>
-                                </div>
-                            </div>
+                    
 
                             <div class="col-md-12">
                                 <div class="form-group">
