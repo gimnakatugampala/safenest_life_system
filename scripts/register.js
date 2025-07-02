@@ -7,6 +7,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const termsCheckbox = document.getElementById("customCheck1");
   let currentStep = 0;
 
+  
+  function populateOverview() {
+  const email = form.querySelector('input[name="email"]').value;
+  const password = form.querySelector('input[name="password"]').value;
+  const fullName = form.querySelector('input[name="full_name"]').value;
+  const city = form.querySelector('input[name="city"]').value;
+  const state = form.querySelector('input[name="state"]').value;
+  const gender = form.querySelector('input[name="gender"]:checked')?.nextElementSibling.textContent.trim() || "-";
+
+  document.getElementById("overviewEmail").textContent = email;
+  document.getElementById("overviewPassword").textContent = '*'.repeat(password.length);
+  document.getElementById("overviewFullName").textContent = fullName;
+  document.getElementById("overviewCity").textContent = city;
+  document.getElementById("overviewState").textContent = state;
+  document.getElementById("overviewGender").textContent = gender;
+}
+
   function showStep(index) {
     sections.forEach((section, i) => {
       section.style.display = i === index ? "block" : "none";
@@ -15,7 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
     prevBtn.style.display = index > 0 ? "inline-block" : "none";
     nextBtn.style.display = index < sections.length - 1 ? "inline-block" : "none";
     submitBtn.classList.toggle("d-none", index !== sections.length - 1);
+
+      // Populate overview when on last step
+  if (index === sections.length - 1) {
+    populateOverview();
   }
+  }
+
+
 
   function validateSection(index) {
     const inputs = sections[index].querySelectorAll("input");
