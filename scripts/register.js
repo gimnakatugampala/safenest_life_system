@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
   const submitBtn = document.getElementById("submitBtn");
+  const termsCheckbox = document.getElementById("customCheck1");
   let currentStep = 0;
 
   function showStep(index) {
@@ -16,6 +17,63 @@ document.addEventListener("DOMContentLoaded", function () {
     submitBtn.classList.toggle("d-none", index !== sections.length - 1);
   }
 
+  function validateSection(index) {
+    const inputs = sections[index].querySelectorAll("input");
+    let password = "", confirmPassword = "";
+
+    for (let input of inputs) {
+      if (input.type === "radio") {
+        const name = input.name;
+        const radios = sections[index].querySelectorAll(`input[name="${name}"]`);
+        const isChecked = Array.from(radios).some(r => r.checked);
+        if (!isChecked) {
+          Swal.fire({
+            icon: "warning",
+            title: "Required",
+            text: `Please select a value for ${name}`
+          });
+          return false;
+        }
+      } else {
+        if (!input.value.trim()) {
+          Swal.fire({
+            icon: "warning",
+            title: "Missing Field",
+            text: `Please fill out the ${input.name || input.id || "field"}`
+          });
+          return false;
+        }
+
+        if (input.name === "password") {
+          password = input.value;
+          if (password.length < 8) {
+            Swal.fire({
+              icon: "warning",
+              title: "Weak Password",
+              text: "Password must be at least 8 characters"
+            });
+            return false;
+          }
+        }
+
+        if (input.name === "confirm_password") {
+          confirmPassword = input.value;
+        }
+      }
+    }
+
+    if (password && confirmPassword && password !== confirmPassword) {
+      Swal.fire({
+        icon: "warning",
+        title: "Password Mismatch",
+        text: "Passwords do not match"
+      });
+      return false;
+    }
+
+    return true;
+  }
+
   prevBtn.addEventListener("click", function () {
     if (currentStep > 0) {
       currentStep--;
@@ -24,13 +82,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   nextBtn.addEventListener("click", function () {
-    if (currentStep < sections.length - 1) {
+    if (validateSection(currentStep)) {
       currentStep++;
       showStep(currentStep);
     }
   });
 
   submitBtn.addEventListener("click", function () {
+    if (!validateSection(currentStep)) return;
+
+    if (!termsCheckbox.checked) {
+      Swal.fire({
+        icon: "warning",
+        title: "Terms Not Accepted",
+        text: "You must agree to the terms and privacy policy before submitting."
+      });
+      return;
+    }
+
     const formData = new FormData(form);
 
     fetch("../api/api_register.php", {
@@ -40,15 +109,29 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(res => res.json())
       .then(data => {
         if (data.success) {
-          alert("Registration successful!");
-          window.location.href = "../auth/login.php";
+          Swal.fire({
+            icon: "success",
+            title: "Registration Complete",
+            text: "Redirecting to login...",
+            confirmButtonText: "OK"
+          }).then(() => {
+            window.location.href = "../auth/login.php";
+          });
         } else {
-          alert("Error: " + data.message);
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: data.message || "Something went wrong"
+          });
         }
       })
       .catch(err => {
         console.error("Error:", err);
-        alert("Something went wrong.");
+        Swal.fire({
+          icon: "error",
+          title: "Request Failed",
+          text: "Please try again later"
+        });
       });
   });
 

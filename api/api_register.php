@@ -1,5 +1,5 @@
 <?php
-require_once '../includes/db_connection.php'; // update path if needed
+require_once '../includes/db_connection.php'; // Update path if needed
 
 header('Content-Type: application/json');
 
@@ -10,6 +10,17 @@ try {
     $gender_id = $_POST['gender']; // 1 = Male, 2 = Female
     $city = $_POST['city'];
     $state = $_POST['state'];
+
+    // Check if email already exists
+    $checkStmt = $conn->prepare("SELECT id FROM general_user_profile WHERE email = ?");
+    $checkStmt->bind_param("s", $email);
+    $checkStmt->execute();
+    $checkStmt->store_result();
+
+    if ($checkStmt->num_rows > 0) {
+        echo json_encode(["success" => false, "message" => "Email already exists"]);
+        exit;
+    }
 
     // Insert into general_user_profile
     $stmt1 = $conn->prepare("INSERT INTO general_user_profile (email, password, first_name, last_name, gup_type_id, user_status_id) VALUES (?, ?, '', '', 1, 1)");
