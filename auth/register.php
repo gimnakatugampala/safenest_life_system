@@ -23,12 +23,7 @@
 												<input type="email" class="form-control">
 											</div>
 										</div>
-										<div class="form-group row">
-											<label class="col-sm-4 col-form-label">Username*</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control">
-											</div>
-										</div>
+
 										<div class="form-group row">
 											<label class="col-sm-4 col-form-label">Password*</label>
 											<div class="col-sm-8">
