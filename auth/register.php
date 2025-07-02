@@ -1,5 +1,9 @@
 <?php include_once '../includes/a_header.php'; ?>
-
+<style>
+	.wizard-content .wizard>.actions{
+		display: none;
+	}
+</style>
 
 <body class="login-page">
 	<div class="register-page-wrap d-flex align-items-center flex-wrap justify-content-center">
@@ -13,7 +17,7 @@
 									<h3 class="text-center text-primary">Register To Safenest</h3>
 								</div>
 
-							<form class="tab-wizard2 wizard-circle wizard">
+							<form id="formRegister" class="tab-wizard2 wizard-circle wizard">
 								<h5>Basic Account Credentials</h5>
 								<section>
 									<div class="form-wrap max-width-600 mx-auto">
@@ -117,6 +121,14 @@
 										</div>
 									</div>
 								</section>
+
+								<!-- Navigation Buttons -->
+						<div class="form-navigation text-center my-4">
+						<button type="button" id="prevBtn" class="btn btn-secondary">Previous</button>
+						<button type="button" id="nextBtn" class="btn btn-primary">Next</button>
+						<button type="button" id="submitBtn" class="btn btn-success d-none">Submit</button>
+						</div>
+
 							</form>
 							<p class="text-center pb-5">Already have an account ? <b><a href="../auth/login.php">Login</a></b></p>
 						</div>
@@ -129,7 +141,7 @@
 		</div>
 	</div>
 	<!-- success Popup html Start -->
-	<button type="button" id="success-modal-btn" hidden data-toggle="modal" data-target="#success-modal" data-backdrop="static">Launch modal</button>
+	<!-- <button type="button" id="success-modal-btn" hidden data-toggle="modal" data-target="#success-modal" data-backdrop="static">Launch modal</button>
 	<div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered max-width-400" role="document">
 			<div class="modal-content">
@@ -143,6 +155,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
+	<script src="../scripts/register.js"></script>
 	<?php include_once '../includes/a_footer.php'; ?>
