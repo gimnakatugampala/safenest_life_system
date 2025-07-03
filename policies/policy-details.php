@@ -39,7 +39,7 @@
 				</div>
 				<div class="product-wrap">
 					<div class="product-detail-wrap mb-30">
-						<div class="row">
+						<!-- <div class="row">
 							<div class="col-lg-6 col-md-12 col-sm-12">
 								<div class="product-slider slider-arrow">
 									<div class="product-slide">
@@ -87,7 +87,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<h4 class="mb-20">Recent Product</h4>
 					<div class="product-list">
@@ -218,5 +218,7 @@
 			</div>
 		</div>
 	</div>
+
+	<script src="../scripts/policy_details.js"></script>
 
 	<?php include_once '../includes/footer.php'; ?>
