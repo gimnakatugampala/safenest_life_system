@@ -79,5 +79,38 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 
+  // ─── Load Policy Details ───────────────────────────────────────────────
+
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  function loadPolicyDetails() {
+    const policyId = getQueryParam("policy_id");
+    if (!policyId) return;
+
+    fetch(`../api/api_get_policy.php?policy_id=${policyId}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          const selects = document.querySelectorAll("section:nth-of-type(2) select");
+
+          if (selects.length >= 4) {
+            selects[0].innerHTML = `<option selected>${data.policy.plan}</option>`;
+            selects[1].innerHTML = `<option selected>${data.policy.term}</option>`;
+            selects[2].innerHTML = `<option selected>${data.policy.premium}</option>`;
+            selects[3].innerHTML = `<option selected>${data.policy.eligibility}</option>`;
+          }
+        } else {
+          console.warn("Failed to load policy details:", data.message);
+        }
+      })
+      .catch(err => {
+        console.error("Error fetching policy details:", err);
+      });
+  }
+
+  loadPolicyDetails();
   showStep(currentStep);
 });
