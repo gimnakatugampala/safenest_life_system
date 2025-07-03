@@ -57,14 +57,6 @@
 							</thead>
 							<tbody id="policy-body">
 								
-								<tr>
-									<td class="table-plus">Andrea J. Cagle</td>
-									<td>30</td>
-									<td>Gemini</td>
-									<td>1280 Prospect Valley Road Long Beach, CA 90802 </td>
-									<td>29-03-2018</td>
-									<td>$162,700</td>
-								</tr>
 							</tbody>
 						</table>
 					</div>

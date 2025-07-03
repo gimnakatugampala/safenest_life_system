@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <td><span class="badge badge-pill badge-${item.status_id == 1 ? "info" : item.status_id == 2 ? "success" : "danger" }">${item.status_id == 1 ? "Pending" : item.status_id == 2 ? "Approve" : "Reject" }</span></td>
             <td>
               <button 
+                data-id="${item.id}" 
                 class="btn btn-primary btn-sm view-btn">
                 Pay Now
               </button>
@@ -86,52 +87,8 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 
-    if (target.classList.contains("approve-btn")) {
-      Swal.fire({
-        title: "Are you sure?",
-        text: "You are about to approve this application.",
-        icon: "question",
-        showCancelButton: true,
-        confirmButtonText: "Yes, approve it",
-        cancelButtonText: "Cancel"
-      }).then((result) => {
-        if (result.isConfirmed) {
-          updateStatus(id, 2, target.closest("tr"));
-        }
-      });
-    }
 
-    if (target.classList.contains("reject-btn")) {
-      Swal.fire({
-        title: "Are you sure?",
-        text: "You are about to reject this application.",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonText: "Yes, reject it",
-        cancelButtonText: "Cancel"
-      }).then((result) => {
-        if (result.isConfirmed) {
-          updateStatus(id, 3, target.closest("tr"));
-        }
-      });
-    }
   });
 
-    function updateStatus(id, status, rowElement) {
-    fetch(`../api/api_update_application.php`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id, status })
-    })
-      .then((r) => r.json())
-      .then((d) => {
-        if (d.success) {
-          Swal.fire("Success", d.message || "Updated successfully.", "success");
-          if (rowElement) rowElement.remove();
-        } else {
-          Swal.fire("Error", d.message || "Update failed.", "error");
-        }
-      })
-      .catch(() => Swal.fire("Error", "Failed to update application status.", "error"));
-  }
+ 
 });
