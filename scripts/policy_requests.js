@@ -51,22 +51,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const target = e.target.closest("button");
     if (!target) return;
     const id = target.dataset.id;
+    console.log(id)
 
     if (target.classList.contains("view-btn")) {
-      fetch(`../api/api_get_policy_application.php?id=${id}`)
+      fetch(`../api/api_get_policy_application_id.php?id=${id}`)
         .then((r) => r.json())
         .then((d) => {
-          if (d.success && d.data) {
-            let html = `<dl class="row">`;
-            for (const [k, v] of Object.entries(d.data)) {
-              html += `<dt class="col-sm-4 text-capitalize">${k.replace(/_/g, " ")}</dt>
-                       <dd class="col-sm-8">${v}</dd>`;
-            }
-            html += `</dl>`;
-            document.getElementById("viewContent").innerHTML = html;
-          } else {
-            Swal.fire("Error", d.message || "Failed to fetch policy details.", "error");
-          }
+        //   if (d.success && d.data) {
+        //     let html = `<dl class="row">`;
+        //     for (const [k, v] of Object.entries(d.data)) {
+        //       html += `<dt class="col-sm-4 text-capitalize">${k.replace(/_/g, " ")}</dt>
+        //                <dd class="col-sm-8">${v}</dd>`;
+        //     }
+        //     html += `</dl>`;
+        //     document.getElementById("viewContent").innerHTML = html;
+        //   } else {
+        //     Swal.fire("Error", d.message || "Failed to fetch policy details.", "error");
+        //   }
+        console.log(d)
         })
         .catch(() => Swal.fire("Error", "Error loading policy details.", "error"));
     }
