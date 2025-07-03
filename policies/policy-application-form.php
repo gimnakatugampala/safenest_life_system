@@ -191,21 +191,24 @@
 
 				
 
-				<!-- success Popup html Start -->
-				<div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-body text-center font-18">
-								<h3 class="mb-20">Form Submitted!</h3>
-								<div class="mb-30 text-center"><img src="../vendors/images/success.png"></div>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							</div>
-							<div class="modal-footer justify-content-center">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
-							</div>
-						</div>
-					</div>
-				</div>
+		<!-- Success Popup Modal -->
+<div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center font-18">
+        <h3 class="mb-20 text-success">Form Submitted Successfully!</h3>
+        <div class="mb-30 text-center">
+          <img src="../vendors/images/success.png" alt="Success" style="max-width: 100px;">
+        </div>
+        <p>Your policy application has been submitted successfully. We will review your information and get back to you shortly.</p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 				<!-- success Popup html End -->
 			</div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
