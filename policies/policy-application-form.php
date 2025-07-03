@@ -1,5 +1,11 @@
 <?php include_once '../includes/header.php'; ?>
 
+<style>
+	.wizard-content .wizard>.actions{
+		display: none;
+	}
+</style>
+
 <body>
 	<div class="pre-loader">
 		<div class="pre-loader-box">
@@ -43,7 +49,7 @@
 						<p class="mb-30">jQuery Step wizard</p>
 					</div> -->
 					<div class="wizard-content">
-						<form class="tab-wizard wizard-circle wizard">
+						<form id="formPolicyApp"  class="tab-wizard wizard-circle wizard">
 							<h5>Personal Info</h5>
 							<section>
 								<div class="row">
@@ -186,6 +192,11 @@
 
 								</div>
 							</section>
+								<div class="d-flex justify-content-between mt-4">
+								<button type="button" id="prevBtn" class="btn btn-secondary">Previous</button>
+								<button type="button" id="nextBtn" class="btn btn-primary">Next</button>
+								<button type="button" id="submitBtn" class="btn btn-success d-none">Submit</button>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -215,5 +226,6 @@
 		</div>
 	</div>
 
+	<script src="../scripts/policy_application_form.js"></script>
 
 	<?php include_once '../includes/footer.php'; ?>
