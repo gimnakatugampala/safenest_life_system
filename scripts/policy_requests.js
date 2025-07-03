@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Handle button actions
+  // Handle button actions
   tableBody.addEventListener("click", function (e) {
     const target = e.target.closest("button");
     if (!target) return;
@@ -64,24 +65,44 @@ document.addEventListener("DOMContentLoaded", function () {
             html += `</dl>`;
             document.getElementById("viewContent").innerHTML = html;
           } else {
-            alert(d.message || "Failed to fetch policy details.");
+            Swal.fire("Error", d.message || "Failed to fetch policy details.", "error");
           }
         })
-        .catch(() => alert("Error loading policy details."));
+        .catch(() => Swal.fire("Error", "Error loading policy details.", "error"));
     }
 
     if (target.classList.contains("approve-btn")) {
-      if (!confirm("Approve this application?")) return;
-      updateStatus(id, 2, target.closest("tr"));
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You are about to approve this application.",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Yes, approve it",
+        cancelButtonText: "Cancel"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          updateStatus(id, 2, target.closest("tr"));
+        }
+      });
     }
 
     if (target.classList.contains("reject-btn")) {
-      if (!confirm("Reject this application?")) return;
-      updateStatus(id, 3, target.closest("tr"));
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You are about to reject this application.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, reject it",
+        cancelButtonText: "Cancel"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          updateStatus(id, 3, target.closest("tr"));
+        }
+      });
     }
   });
 
-  function updateStatus(id, status, rowElement) {
+    function updateStatus(id, status, rowElement) {
     fetch(`../api/api_update_application.php`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -89,11 +110,13 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then((r) => r.json())
       .then((d) => {
-        alert(d.message || (d.success ? "Updated successfully." : "Update failed."));
-        if (d.success && rowElement) {
-          rowElement.remove();
+        if (d.success) {
+          Swal.fire("Success", d.message || "Updated successfully.", "success");
+          if (rowElement) rowElement.remove();
+        } else {
+          Swal.fire("Error", d.message || "Update failed.", "error");
         }
       })
-      .catch(() => alert("Failed to update application status."));
+      .catch(() => Swal.fire("Error", "Failed to update application status.", "error"));
   }
 });
