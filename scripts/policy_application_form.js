@@ -5,8 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextBtn = document.getElementById("nextBtn");
   const submitBtn = document.getElementById("submitBtn");
   const termsCheckbox = document.getElementById("customCheck1");
+  const relationSelect = document.getElementById("relationSelect");
 
   let currentStep = 0;
+
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
 
   function showStep(index) {
     sections.forEach((section, i) => {
@@ -60,8 +66,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const formData = new FormData(form);
+    const policyId = getQueryParam("policy_id");
+    if (policyId) {
+      formData.append("policy_id", policyId);
+    }
 
-    fetch("../api/api_submit_policy_application.php", {
+    fetch("../api/api_policy_application_form.php", {
       method: "POST",
       body: formData
     })
@@ -69,6 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         if (data.success) {
           $("#success-modal").modal("show");
+          form.reset();
+          currentStep = 0;
+          showStep(currentStep);
         } else {
           Swal.fire("Error", data.message || "Something went wrong", "error");
         }
@@ -80,33 +93,28 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Load Relationship Options for Nominee
-  fetch('../api/api_get_relationships.php')
+  fetch("../api/api_get_relationships.php")
     .then(response => response.json())
     .then(data => {
-      const select = document.getElementById('relationSelect');
       if (data.success && Array.isArray(data.data)) {
         data.data.forEach(rel => {
-          const option = document.createElement('option');
+          const option = document.createElement("option");
           option.value = rel.id;
           option.textContent = rel.relation;
-          select.appendChild(option);
+          relationSelect.appendChild(option);
         });
       } else {
-        console.warn('Failed to load relationship list');
+        console.warn("Failed to load relationship list");
       }
     })
     .catch(error => {
-      console.error('Error fetching relationships:', error);
+      console.error("Error fetching relationships:", error);
     });
 
-  // Load Policy Details using policy_id from query string
-  function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-  }
-
+  // Load Policy Details from query string
   function loadPolicyDetails() {
     const policyId = getQueryParam("policy_id");
+    console.log(policyId)
     if (!policyId) return;
 
     fetch(`../api/api_get_policy.php?policy_id=${policyId}`)

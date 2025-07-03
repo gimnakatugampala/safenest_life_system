@@ -51,46 +51,46 @@
 					<div class="wizard-content">
 						<form id="formPolicyApp"  class="tab-wizard wizard-circle wizard">
 							<h5>Personal Info</h5>
-							<section>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label >First Name :</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label >Last Name :</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<label>Full Name :</label>
-											<input type="email" class="form-control">
-										</div>
-									</div>
-									
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Age :</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
+						<!-- Step 1 -->
+						<section>
+						<div class="row">
+							<div class="col-md-6">
+							<div class="form-group">
+								<label>First Name :</label>
+								<input type="text" class="form-control" name="first_name" required>
+							</div>
+							</div>
+							<div class="col-md-6">
+							<div class="form-group">
+								<label>Last Name :</label>
+								<input type="text" class="form-control" name="last_name" required>
+							</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+							<div class="form-group">
+								<label>Full Name :</label>
+								<input type="text" class="form-control" name="full_name" required>
+							</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+							<div class="form-group">
+								<label>Age :</label>
+								<input type="text" class="form-control" name="age" required>
+							</div>
+							</div>
+							<div class="col-md-6">
+							<div class="form-group">
+								<label>Date of Birth :</label>
+								<input type="date" class="form-control" name="dob" placeholder="Select Date" required>
+							</div>
+							</div>
+						</div>
+						</section>
 
-									<div class="col-md-6">
-										<div class="form-group">
-											<label >Date of Birth :</label>
-											<input type="text" class="form-control date-picker" placeholder="Select Date">
-										</div>
-									</div>
-								</div>
-							</section>
 							<!-- Step 2 -->
 							<h5>Policy Details</h5>
 							<section>
@@ -131,33 +131,33 @@
 								</div>
 							</section>
 							<!-- Step 3 -->
-<h5>Nominee Info</h5>
-<section>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="form-group">
-        <label>Full Name :</label>
-        <input type="text" class="form-control" name="nominee_full_name" required>
-      </div>
-    </div>
+							<h5>Nominee Info</h5>
+							<section>
+							<div class="row">
+								<div class="col-md-12">
+								<div class="form-group">
+									<label>Full Name :</label>
+									<input type="text" class="form-control" name="nominee_full_name" required>
+								</div>
+								</div>
 
-    <div class="col-md-6">
-      <div class="form-group">
-        <label>Relation :</label>
-        <select id="relationSelect" class="form-control" name="nominee_relation" required>
-          <option value="">Select...</option>
-        </select>
-      </div>
-    </div>
+								<div class="col-md-6">
+								<div class="form-group">
+									<label>Relation :</label>
+									<select id="relationSelect" class="form-control" name="nominee_relation" required>
+									<option value="">Select...</option>
+									</select>
+								</div>
+								</div>
 
-    <div class="col-md-6">
-      <div class="form-group">
-        <label>Age :</label>
-        <input type="text" class="form-control" name="nominee_age" placeholder="Age" required>
-      </div>
-    </div>
-  </div>
-</section>
+								<div class="col-md-6">
+								<div class="form-group">
+									<label>Age :</label>
+									<input type="text" class="form-control" name="nominee_age" placeholder="Age" required>
+								</div>
+								</div>
+							</div>
+							</section>
 
 							<!-- Step 4 -->
 							<h5>Declaration</h5>
@@ -166,13 +166,13 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											<label>Comments (optional)</label>
-											<textarea class="form-control"></textarea>
+											<textarea name="comment" class="form-control"></textarea>
 										</div>
 									</div>
 
 									<div class="col-md-12">
 									<div class="custom-control custom-checkbox mb-5">
-										<input type="checkbox" class="custom-control-input" id="customCheck1">
+										<input type="checkbox" class="custom-control-input" id="customCheck1" name="terms">
 										<label class="custom-control-label" for="customCheck1">I accept the Terms and Conditions</label>
 									</div>
 									</div>
