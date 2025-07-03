@@ -91,9 +91,9 @@
 					</div>
 					<h4 class="mb-20">Recent Product</h4>
 					<div class="product-list">
-						<ul class="row">
+						<ul class="row" id="recent-list">
 
-							<li class="col-lg-4 col-md-6 col-sm-12">
+							<!-- <li class="col-lg-4 col-md-6 col-sm-12">
 								<div class="product-box">
 									<div class="producct-img"><img src="../vendors/images/product-img2.jpg" alt=""></div>
 								
@@ -206,7 +206,7 @@
 										</div>
 									</div>
 								</div>
-							</li>
+							</li> -->
 
 
 						</ul>

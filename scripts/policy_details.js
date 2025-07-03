@@ -116,49 +116,71 @@ function renderPolicy({ policy, pictures, benefits }) {
   /* ------------------------------------------------------------
      3. Build recent‑product cards (3)
   -------------------------------------------------------------*/
-  function loadRecent() {
-    $.getJSON("../api/get_life_policies.php", res => {
-      if (!res.success) return;
-      const recent = res.data.filter(p => p.id != id).slice(0, 3);
-      const $ul = $(".product-list ul").first().empty();
-      recent.forEach(p => $ul.append(recentCard(p)));
-    });
-  }
+/* ------------------------------------------------------------
+   3. Render recent‑product cards (max 3) – uses res.recent
+-------------------------------------------------------------*/
+function renderRecent(list = []) {
+  if (!list.length) return;                           // nothing to show
+  const $ul = $("#recent-list").empty();
 
-  function recentCard(p) {
-    const money = n => `LKR ${(n).toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
-    const oldPrice = money((+p.premium_amount) * 1.10);
-    const benefitsHTML = p.benefits.slice(0, 7).map(b => `<li>${b}</li>`).join("");
+  list.slice(0, 3).forEach(p => {                     // hard limit 3
+    $ul.append(recentCard(p));
+  });
+}
 
-    return `
-      <li class="col-lg-4 col-md-6 col-sm-12">
-        <div class="product-box">
-          <div class="producct-img"><img src="../${p.image}" alt=""></div>
+function recentCard(p) {
+  const money = n => `LKR ${(n).toLocaleString(undefined, {
+    minimumFractionDigits: 2
+  })}`;
+  const oldPrice  = money((+p.premium_amount) * 1.10);  // crossed‑out price
+  const benefitsHTML = p.benefits
+                        .slice(0, 3)                     // show max 3 bullets
+                        .map(b => `<li>${b}</li>`)
+                        .join("");
 
-          <div class="product-caption text-center">
-            <h4><a href="policy-details.php?id=${p.id}">${p.policy_name}</a></h4>
+  return `
+    <li class="col-lg-4 col-md-6 col-sm-12 mb-3">
+      <div class="product-box">
+        <div class="producct-img"><img src="../${p.image}" alt=""></div>
 
-            <div class="contact-name text-center">
-              <p>${p.term_years}‑year term</p>
-            </div>
+        <div class="product-caption text-center">
+          <h4><a href="policy-details.php?id=${p.id}">${p.policy_name}</a></h4>
 
-            <div class="price text-center">
-              <h6 class="text-muted"><del>${oldPrice}</del></h6>
-              <h3>${money(p.premium_amount)}</h3>
-            </div>
+          <div class="contact-name text-center">
+            <p>${p.term_years}&nbsp;year term</p>
+          </div>
 
-            <hr>
-            <div class="pricing-card-body">
-              <div class="pricing-points">
-                <ul>${benefitsHTML}</ul>
-              </div>
-            </div>
-            <hr>
-            <div class="d-flex justify-content-center">
-              <a href="policy-details.php?id=${p.id}" class="btn btn-outline-primary">Select Now</a>
+          <div class="price text-center">
+            <h6 class="text-muted"><del>${oldPrice}</del></h6>
+            <h3>${money(p.premium_amount)}</h3>
+          </div>
+
+          <hr>
+          <div class="pricing-card-body">
+            <div class="pricing-points">
+              <ul>${benefitsHTML}</ul>
             </div>
           </div>
+          <hr>
+          <div class="d-flex justify-content-center">
+            <a href="policy-details.php?id=${p.id}" class="btn btn-outline-primary">Select Now</a>
+          </div>
         </div>
-      </li>`;
-  }
+      </div>
+    </li>`;
+}
+
+/* -----------------------------------------------------------------
+   MAIN AJAX CALL  – add renderRecent(res.recent) right after render
+------------------------------------------------------------------*/
+$.getJSON(`../api/api_policy_details.php?id=${id}`, res => {
+  if (!res.success) throw res.message;
+  injectMarkup();
+  renderPolicy(res);          // main policy
+  renderRecent(res.recent);   // ← use the recent array returned by PHP
+}).fail(xhr => {
+  Swal.fire("Error", xhr.responseText || "Failed to load policy", "error");
+});
+
+
 });
