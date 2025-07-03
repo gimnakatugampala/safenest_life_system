@@ -99,10 +99,7 @@
 										<div class="form-group">
 											<label>Policy Plan:</label>
 											<select disabled class="custom-select col-12">
-												<option selected="">Beginner</option>
-												<option value="1">One</option>
-												<option value="2">Two</option>
-												<option value="3">Three</option>
+												
 											</select>
 										</div>
 									</div>
@@ -110,10 +107,7 @@
 										<div class="form-group">
 											<label>Term/ Duration :</label>
 											<select disabled class="custom-select col-12">
-												<option selected="">10 Years</option>
-												<option value="1">One</option>
-												<option value="2">Two</option>
-												<option value="3">Three</option>
+												
 											</select>
 										</div>
 									</div>
@@ -121,10 +115,7 @@
 										<div class="form-group">
 											<label>Premium :</label>
 											<select disabled class="custom-select col-12">
-												<option selected="">LKR 2,000 / month</option>
-												<option value="1">One</option>
-												<option value="2">Two</option>
-												<option value="3">Three</option>
+												
 											</select>
 										</div>
 									</div>
@@ -132,10 +123,7 @@
 										<div class="form-group">
 											<label>Eligibility :</label>
 											<select disabled class="custom-select col-12">
-												<option selected="">18–50</option>
-												<option value="1">One</option>
-												<option value="2">Two</option>
-												<option value="3">Three</option>
+												
 											</select>
 										</div>
 									</div>
@@ -143,34 +131,34 @@
 								</div>
 							</section>
 							<!-- Step 3 -->
-							<h5>Nominee Info</h5>
-							<section>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<label>Full Name :</label>
-											<input type="text" class="form-control">
-										</div>
-									
-									</div>
-									<div class="col-md-6">
-											<div class="form-group">
-											<label>Relation :</label>
-											<select class="form-control">
-												<option>Normal</option>
-												<option>Difficult</option>
-												<option>Hard</option>
-											</select>
-										</div>
-									</div>
-										<div class="col-md-6">
-										<div class="form-group">
-											<label>Age :</label>
-											<input type="text" class="form-control" placeholder="Age">
-										</div>
-									</div>
-								</div>
-							</section>
+<h5>Nominee Info</h5>
+<section>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label>Full Name :</label>
+        <input type="text" class="form-control" name="nominee_full_name" required>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Relation :</label>
+        <select id="relationSelect" class="form-control" name="nominee_relation" required>
+          <option value="">Select...</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Age :</label>
+        <input type="text" class="form-control" name="nominee_age" placeholder="Age" required>
+      </div>
+    </div>
+  </div>
+</section>
+
 							<!-- Step 4 -->
 							<h5>Declaration</h5>
 							<section>

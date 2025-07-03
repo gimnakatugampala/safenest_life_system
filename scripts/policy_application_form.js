@@ -20,19 +20,18 @@ document.addEventListener("DOMContentLoaded", function () {
   function validateSection(index) {
     const inputs = sections[index].querySelectorAll("input, select, textarea");
     for (const input of inputs) {
-      if (input.type === "checkbox" || input.disabled) continue;
+      if (input.disabled || input.type === "checkbox") continue;
+
       if (input.type === "radio") {
         const radios = sections[index].querySelectorAll(`input[name="${input.name}"]`);
         const checked = Array.from(radios).some(r => r.checked);
         if (!checked) {
-          Swal.fire("Missing Input", `Please select a value for ${input.name}`, "warning");
+          Swal.fire("Missing Input", `Please select an option for ${input.name}`, "warning");
           return false;
         }
-      } else {
-        if (!input.value.trim()) {
-          Swal.fire("Missing Input", `Please fill out the ${input.name || input.id || "field"}`, "warning");
-          return false;
-        }
+      } else if (!input.value.trim()) {
+        Swal.fire("Missing Input", `Please fill out the ${input.name || input.id || "field"}`, "warning");
+        return false;
       }
     }
     return true;
@@ -54,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   submitBtn.addEventListener("click", function () {
     if (!validateSection(currentStep)) return;
+
     if (!termsCheckbox.checked) {
       Swal.fire("Terms Required", "Please accept the terms and conditions to proceed", "warning");
       return;
@@ -79,8 +79,27 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 
-  // ─── Load Policy Details ───────────────────────────────────────────────
+  // Load Relationship Options for Nominee
+  fetch('../api/api_get_relationships.php')
+    .then(response => response.json())
+    .then(data => {
+      const select = document.getElementById('relationSelect');
+      if (data.success && Array.isArray(data.data)) {
+        data.data.forEach(rel => {
+          const option = document.createElement('option');
+          option.value = rel.id;
+          option.textContent = rel.relation;
+          select.appendChild(option);
+        });
+      } else {
+        console.warn('Failed to load relationship list');
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching relationships:', error);
+    });
 
+  // Load Policy Details using policy_id from query string
   function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
@@ -93,9 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch(`../api/api_get_policy.php?policy_id=${policyId}`)
       .then(res => res.json())
       .then(data => {
-        if (data.success) {
-          const selects = document.querySelectorAll("section:nth-of-type(2) select");
-
+        if (data.success && data.policy) {
+          const selects = sections[1].querySelectorAll("select");
           if (selects.length >= 4) {
             selects[0].innerHTML = `<option selected>${data.policy.plan}</option>`;
             selects[1].innerHTML = `<option selected>${data.policy.term}</option>`;
