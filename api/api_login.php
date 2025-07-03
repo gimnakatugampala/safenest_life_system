@@ -32,7 +32,7 @@ try {
 	if ($user && password_verify($password, $user['password'])) {
 		$_SESSION['user_id'] = $user['id'];
 		$_SESSION['user_email'] = $user['email'];
-		$_SESSION['first_name'] = $user['first_name'];
+		$_SESSION['full_name'] = $user['first_name'];
 		$_SESSION['user_type'] = $user['gup_type_id'];  // store user type
 
 		echo json_encode(['success' => true]);

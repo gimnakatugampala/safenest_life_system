@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../includes/db_connection.php'; // Update path if needed
 
 header('Content-Type: application/json');
@@ -32,6 +33,12 @@ try {
     $stmt2 = $conn->prepare("INSERT INTO user_details (full_name, city, state, gender_id, general_user_profile_id) VALUES (?, ?, ?, ?, ?)");
     $stmt2->bind_param("sssii", $full_name, $city, $state, $gender_id, $profile_id);
     $stmt2->execute();
+
+    // Store user info in session
+    $_SESSION['user_id'] = $profile_id;
+    $_SESSION['user_email'] = $email;
+    $_SESSION['full_name'] = $full_name; // assuming full_name can be used here
+    $_SESSION['user_type'] = 1; // fixed gup_type_id for registration
 
     echo json_encode(["success" => true]);
 } catch (Exception $e) {

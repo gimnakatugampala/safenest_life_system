@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <div class="header">
 		<div class="header-left">
 			<div class="menu-icon dw dw-menu"></div>
@@ -109,7 +110,7 @@
 						<span class="user-icon">
 							<img src="../vendors/images/photo1.jpg" alt="">
 						</span>
-						<span class="user-name">Gimna Katugampala</span>
+						<span class="user-name"><?php echo $_SESSION['user_email']; ?></span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<a class="dropdown-item" href="../profile/"><i class="dw dw-user1"></i> Profile</a>

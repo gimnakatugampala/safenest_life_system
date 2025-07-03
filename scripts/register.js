@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
             text: "Redirecting to login...",
             confirmButtonText: "OK"
           }).then(() => {
-            window.location.href = "../auth/login.php";
+            window.location.href = "../dashboard";
           });
         } else {
           Swal.fire({
