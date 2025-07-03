@@ -22,10 +22,12 @@ $sql = "
         lp.coverage_amount,
         CONCAT(lp.min_age, '-', lp.max_age) AS age_limit,
         DATE_FORMAT(up.created_date, '%Y-%m-%d') AS req_date,
-        up.status_id
+        up.status_id,
+        paf.*
     FROM user_life_policy up
     INNER JOIN life_policy lp ON up.life_policy_id = lp.id
     INNER JOIN general_user_profile u ON up.gup_id = u.id
+    INNER JOIN policy_application_form paf ON paf.user_life_policy_life_policy_id = up.id
     WHERE up.id = ?
     LIMIT 1
 ";
