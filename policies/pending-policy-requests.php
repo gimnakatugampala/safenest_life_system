@@ -41,22 +41,22 @@
 				<div class="card-box mb-30">
 					<div class="pd-20">
 					</div>
-					<div class="pb-20">
+					<div class="table-responsive pb-20">
 						<table class="table hover multiple-select-row data-table-export nowrap">
 							<thead>
 								<tr>
 									<th class="table-plus datatable-nosort">Policy Name</th>
 									<th class="table-plus datatable-nosort">Customer Name</th>
-									<th>Amount</th>
-									<th>Duration</th>
+									<th>Premium Amount</th>
+									<th>Coverage Amount</th>
 									<th>Age Limit</th>
 									<th>Req Date</th>
 									<th>Status</th>
 									<th>Actions</th>
 								</tr>
 							</thead>
-							<tbody>
-								<tr>
+							<tbody id="pending-policy-body">
+								<!-- <tr>
 									<td class="table-plus">Beginner</td>
 									<td>Gimna Katugampala</td>
 									<td>25</td>
@@ -69,7 +69,7 @@
                                         <button id="sa-params" type="button" class="btn btn-success btn-sm"><span class="icon-copy ti-check"></span></button>
                                         <button id="sa-warning" type="button" class="btn btn-danger btn-sm"><span class="icon-copy ti-close"></span></button>
                                     </td>
-								</tr>
+								</tr> -->
 							
 							</tbody>
 						</table>
@@ -113,5 +113,7 @@
 
 		</div>
 	</div>
+
+	<script src="../scripts/policy_requests.js"></script>
 
 	<?php include_once '../includes/footer.php'; ?>
