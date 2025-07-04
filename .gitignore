@@ -1,1 +1,5 @@
 /uploads
+/vendor
+
+
+.env
