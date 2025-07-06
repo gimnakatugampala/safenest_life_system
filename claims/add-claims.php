@@ -33,7 +33,8 @@ $user_id = $_SESSION['user_id'];
 
 				<div class="card-box mb-30">
 					<div class="pd-20">
-						<form class="row" method="POST" action="../ajax/submit_claim.php" enctype="multipart/form-data">
+						<form id="claimRequestForm" class="row" method="POST" action="../ajax/submit_claim.php"
+							enctype="multipart/form-data">
 
 							<div class="col-md-6">
 								<div class="form-group">
@@ -41,34 +42,31 @@ $user_id = $_SESSION['user_id'];
 									<select class="custom-select" name="policy_id" required>
 										<option value="" selected disabled>Choose...</option>
 										<?php
-										// Get approved & paid policies of the current user
 										$stmt = $conn->prepare("
-		SELECT ul.id AS user_policy_id, l.policy_name
-		FROM user_life_policy ul
-		INNER JOIN life_policy l ON ul.life_policy_id = l.id
-		WHERE ul.status_id = 2 AND ul.is_paid = 1 AND ul.gup_id = ?
-	");
+				SELECT ul.id AS user_policy_id, l.policy_name
+				FROM user_life_policy ul
+				INNER JOIN life_policy l ON ul.life_policy_id = l.id
+				WHERE ul.status_id = 2 AND ul.is_paid = 1 AND ul.gup_id = ?
+			");
 										$stmt->bind_param("i", $user_id);
 										$stmt->execute();
 										$result = $stmt->get_result();
 
 										while ($row = $result->fetch_assoc()):
-											$policyId = $row['user_policy_id']; // from user_life_policy.id
+											$policyId = $row['user_policy_id'];
 											$policyName = htmlspecialchars($row['policy_name']);
 											?>
 											<option value="<?= $policyId ?>"><?= $policyId ?> - <?= $policyName ?></option>
-										<?php endwhile; ?>
-										<?php $stmt->close(); ?>
+										<?php endwhile;
+										$stmt->close(); ?>
 									</select>
-
-
 								</div>
 							</div>
 
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>Amount</label>
-									<input class="form-control" type="number" name="amount" required min="0"
+									<input class="form-control" type="number" name="amount" required min="1"
 										placeholder="Amount">
 								</div>
 							</div>
@@ -76,29 +74,30 @@ $user_id = $_SESSION['user_id'];
 							<div class="col-md-12">
 								<div class="form-group">
 									<label>Comment</label>
-									<textarea class="form-control" name="comment" required></textarea>
+									<textarea class="form-control" name="comment" required
+										placeholder="Add your comment here..."></textarea>
 								</div>
 							</div>
 
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Prescriptions</label>
+									<label>Prescriptions <span class="text-danger">*</span></label>
 									<input type="file" name="prescription" class="form-control-file"
-										accept=".pdf,.jpg,.jpeg,.png">
+										accept=".pdf,.jpg,.jpeg,.png" required>
 								</div>
 							</div>
 
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Bills & Cash Receipts</label>
+									<label>Bills & Cash Receipts <span class="text-danger">*</span></label>
 									<input type="file" name="bills" class="form-control-file"
-										accept=".pdf,.jpg,.jpeg,.png">
+										accept=".pdf,.jpg,.jpeg,.png" required>
 								</div>
 							</div>
 
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Diagnosis Ticket</label>
+									<label>Diagnosis Ticket (If Available)</label>
 									<input type="file" name="diagnosis" class="form-control-file"
 										accept=".pdf,.jpg,.jpeg,.png">
 								</div>
@@ -106,7 +105,7 @@ $user_id = $_SESSION['user_id'];
 
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Other Files</label>
+									<label>Other Files (If Available)</label>
 									<input type="file" name="other" class="form-control-file"
 										accept=".pdf,.jpg,.jpeg,.png">
 								</div>
@@ -116,13 +115,60 @@ $user_id = $_SESSION['user_id'];
 								<button type="reset" class="btn btn-secondary">Clear</button>
 								<button type="submit" class="btn btn-primary">Submit Claim Request</button>
 							</div>
-
 						</form>
+
 					</div>
 				</div>
 
 			</div>
 		</div>
 	</div>
-
+	<!-- Claim Submission Success Modal -->
+	<div class="modal fade" id="claimSuccessModal" tabindex="-1" role="dialog" aria-labelledby="claimSuccessModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="claimSuccessModalLabel">Claim Request Submitted</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Your claim request has been submitted successfully.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<?php include_once '../includes/footer.php'; ?>
+
+	<script>
+		$(document).ready(function () {
+			$('#claimRequestForm').on('submit', function (e) {
+				e.preventDefault(); // prevent normal form submit
+
+				// Use FormData to handle file uploads
+				let formData = new FormData(this);
+
+				$.ajax({
+					url: $(this).attr('action'),
+					method: 'POST',
+					data: formData,
+					processData: false,  // important for file uploads
+					contentType: false,  // important for file uploads
+					success: function (response) {
+						// You may want to parse and check the response here
+						// For now, assume success if no error returned
+						$('#claimRequestForm')[0].reset();  // reset form
+						$('#claimSuccessModal').modal('show');
+					},
+					error: function () {
+						alert('An error occurred while submitting the claim request. Please try again.');
+					}
+				});
+			});
+		});
+	</script>
