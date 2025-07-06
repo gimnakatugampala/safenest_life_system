@@ -1,8 +1,12 @@
-// This is your test publishable API key.
+const stripe = Stripe("pk_test_51IWaksDzFpbE9UOcAEC96mt4Ed9ECCOxvqjYLnA2YWsPET9RygPsbamByC8pIQ5FBIWp3C8TCwcEyNuL6f9UjpyV00YcKD4dof");
 
+const urlParams = new URLSearchParams(window.location.search);
+const policyId = urlParams.get("policy_id");
 
-// The items the customer wants to buy
-const items = [{ id: "xl-tshirt", amount: 1000 }];
+if (!policyId) {
+  alert("Missing policy ID for payment.");
+  throw new Error("Missing policy ID");
+}
 
 let elements;
 
@@ -13,18 +17,20 @@ document
   .addEventListener("submit", handleSubmit);
 
 async function initialize() {
-  const { clientSecret } = await fetch("../public/create.php", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ items }),
-  }).then((r) => r.json());
+  // Example usage in checkout.js
+const { clientSecret, policyName, amountLKR } = await fetch("../public/create.php", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ policy_id: policyId }),
+}).then((res) => res.json());
+
+document.querySelector("#item-name").textContent = policyName;
+document.querySelector("#amount-lkr").textContent = `LKR ${amountLKR}`;
+
 
   elements = stripe.elements({ clientSecret });
 
-  const paymentElementOptions = {
-    layout: "accordion",
-  };
-
+  const paymentElementOptions = { layout: "accordion" };
   const paymentElement = elements.create("payment", paymentElementOptions);
   paymentElement.mount("#payment-element");
 }
@@ -36,7 +42,7 @@ async function handleSubmit(e) {
   const { error } = await stripe.confirmPayment({
     elements,
     confirmParams: {
-      return_url: "http://localhost/safenest_life_system/public/complete.html",
+      return_url: `http://localhost/safenest_life_system/public/complete.html?policy_id=${policyId}`,
     },
   });
 
@@ -51,7 +57,6 @@ async function handleSubmit(e) {
 
 function showMessage(messageText) {
   const messageContainer = document.querySelector("#payment-message");
-
   messageContainer.classList.remove("hidden");
   messageContainer.textContent = messageText;
 

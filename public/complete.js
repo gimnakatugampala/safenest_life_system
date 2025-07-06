@@ -28,6 +28,8 @@ function setPaymentDetails(intent) {
     return;
   }
 
+  
+
   switch (intent.status) {
     case "succeeded":
       statusText = "Payment succeeded";
@@ -45,6 +47,8 @@ function setPaymentDetails(intent) {
     default:
       break;
   }
+
+  
   
   document.querySelector("#status-icon").style.backgroundColor = iconColor;
   document.querySelector("#status-icon").innerHTML = icon;
@@ -52,6 +56,9 @@ function setPaymentDetails(intent) {
   document.querySelector("#intent-id").textContent = intent.id;
   document.querySelector("#intent-status").textContent = intent.status;
   document.querySelector("#view-details").href = `https://dashboard.stripe.com/payments/${intent.id}`;
+
+  
+
 }
 
 function setErrorState() {
@@ -63,7 +70,7 @@ function setErrorState() {
 }
 
 // Stripe.js instance
-
+const stripe = Stripe("pk_test_51IWaksDzFpbE9UOcAEC96mt4Ed9ECCOxvqjYLnA2YWsPET9RygPsbamByC8pIQ5FBIWp3C8TCwcEyNuL6f9UjpyV00YcKD4dof");
 
 checkStatus();
 
@@ -79,6 +86,27 @@ async function checkStatus() {
   }
 
   const { paymentIntent } = await stripe.retrievePaymentIntent(clientSecret);
+
+const queryParams = new URLSearchParams(window.location.search);
+const policyId = queryParams.get("policy_id");
+// console.log("Policy ID:", policyId);
+// console.log(paymentIntent);
+
+if(paymentIntent.status == "succeeded"){
+      fetch("../api/mark_policy_paid.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ policy_id: policyId }),
+        })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data.success ? "Policy marked as paid." : "Failed to update DB.");
+        })
+        .catch(err => console.error("Error updating DB:", err));
+
+
+      }
+
 
   setPaymentDetails(paymentIntent);
 }
