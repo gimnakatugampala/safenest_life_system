@@ -33,7 +33,8 @@ $user_id = $_SESSION['user_id'];
 
 				<div class="card-box mb-30">
 					<div class="pd-20">
-						<form class="row" method="POST" action="../ajax/submit_claim.php" enctype="multipart/form-data">
+						<form id="claimRequestForm" class="row" method="POST" action="../ajax/submit_claim.php"
+							enctype="multipart/form-data">
 
 							<div class="col-md-6">
 								<div class="form-group">
@@ -122,5 +123,52 @@ $user_id = $_SESSION['user_id'];
 			</div>
 		</div>
 	</div>
-
+	<!-- Claim Submission Success Modal -->
+	<div class="modal fade" id="claimSuccessModal" tabindex="-1" role="dialog" aria-labelledby="claimSuccessModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="claimSuccessModalLabel">Claim Request Submitted</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Your claim request has been submitted successfully.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<?php include_once '../includes/footer.php'; ?>
+
+	<script>
+		$(document).ready(function () {
+			$('#claimRequestForm').on('submit', function (e) {
+				e.preventDefault(); // prevent normal form submit
+
+				// Use FormData to handle file uploads
+				let formData = new FormData(this);
+
+				$.ajax({
+					url: $(this).attr('action'),
+					method: 'POST',
+					data: formData,
+					processData: false,  // important for file uploads
+					contentType: false,  // important for file uploads
+					success: function (response) {
+						// You may want to parse and check the response here
+						// For now, assume success if no error returned
+						$('#claimRequestForm')[0].reset();  // reset form
+						$('#claimSuccessModal').modal('show');
+					},
+					error: function () {
+						alert('An error occurred while submitting the claim request. Please try again.');
+					}
+				});
+			});
+		});
+	</script>
