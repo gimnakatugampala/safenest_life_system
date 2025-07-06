@@ -206,10 +206,11 @@
 						</ul>
 					</li> -->
 					<li>
-						<a href="sitemap.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-diagram"></span><span class="mtext">Logout</span>
-						</a>
-					</li>
+                        <a href="#" onclick="logoutUser(); return false;" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-diagram"></span><span class="mtext">Logout</span>
+                        </a>
+                    </li>
+
 					<!-- <li>
 						<a href="chat.html" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-chat3"></span><span class="mtext">Chat</span>
@@ -226,6 +227,6 @@
 				</ul>
 			</div>
 		</div>
-	</div>
-    
+	</div>    
+	<script src="../scripts/logout.js"></script>
 	<div class="mobile-menu-overlay"></div>
