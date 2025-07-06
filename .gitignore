@@ -1,5 +1,7 @@
 /uploads
 /vendor
 
+/public/checkout.js
+/public/complete.js
 
 .env
