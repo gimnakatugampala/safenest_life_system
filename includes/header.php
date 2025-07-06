@@ -2,8 +2,8 @@
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../auth/login.php");
-    exit;
+	header("Location: ../auth/login.php");
+	exit;
 }
 
 // If this is dashboard page, show dashboard content here
@@ -11,6 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
@@ -25,7 +26,8 @@ if (!isset($_SESSION['user_id'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Google Font -->
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/core.css">
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/icon-font.min.css">
@@ -43,14 +45,14 @@ if (!isset($_SESSION['user_id'])) {
 	<link rel="stylesheet" type="text/css" href="../src/plugins/dropzone/src/dropzone.css">
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/style.css">
 
-	  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 
 		gtag('config', 'UA-119386393-1');
