@@ -3,4 +3,4 @@
 // or in a private script that does not publicly expose the source code.
 
 // This is your test secret API key.
-$stripeSecretKey = $_ENV['STRIPE_SECRET_KEY'];
+$stripeSecretKey = $_ENV['d'];

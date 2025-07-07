@@ -1,6 +1,8 @@
 /uploads
 /vendor
 
+/node_modules
+
 /public/checkout.js
 /public/complete.js
 
