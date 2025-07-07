@@ -28,7 +28,7 @@ include_once '../includes/db_connection.php';
 				<div class="card-box mb-30">
 					<div class="pd-20"></div>
 					<div class="pb-20">
-						<table class="table hover multiple-select-row data-table-export nowrap">
+						<table class="table hover multiple-select-row data-table-export nowrap table-responsive">
 							<thead>
 								<tr>
 									<th># Claim Code</th>
