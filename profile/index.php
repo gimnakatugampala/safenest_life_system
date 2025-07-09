@@ -192,10 +192,6 @@
 												</form>
 											</div>
 										</div>
-										<!-- Tasks Tab End -->
-										<!-- Setting Tab start -->
-										
-										<!-- Setting Tab End -->
 									</div>
 								</div>
 							</div>
