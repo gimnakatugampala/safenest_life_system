@@ -1,21 +1,40 @@
 <?php
-// Start session if not started yet
+// Start session if not already started
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Ensure user is logged in, else redirect (optional)
+// Redirect if not logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../auth/login.php");
     exit;
 }
 
-// Grab user info from session safely
+// Sanitize session data
 $userEmail = htmlspecialchars($_SESSION['user_email'] ?? 'User');
-$userName = htmlspecialchars($_SESSION['user_name'] ?? 'User'); // If you have user_name
-$userImage = $_SESSION['user_image'] ?? '../vendors/images/photo1.jpg'; // Default avatar path
+$userName = htmlspecialchars($_SESSION['user_name'] ?? 'User');
+
+// Define base URL of your system (adjust if hosted elsewhere)
+$baseURL = 'http://localhost/safenest_life_system/';
+
+// Default image URL (fallback)
+$defaultImage = $baseURL . 'vendors/images/photo1.jpg';
+
+// Get image path from session (relative to project root)
+$userImageFromSession = $_SESSION['user_image'] ?? '';
+
+// Check physical file existence on server
+$physicalImagePath = $_SERVER['DOCUMENT_ROOT'] . '/safenest_life_system/' . ltrim($userImageFromSession, '/');
+
+// If image is valid and exists, prepend base URL to get full web path
+if (!empty($userImageFromSession) && file_exists($physicalImagePath)) {
+    $userImage = $baseURL . ltrim($userImageFromSession, '/');
+} else {
+    $userImage = $defaultImage;
+}
 ?>
 
+<!-- HTML HEADER -->
 <div class="header">
     <div class="header-left">
         <div class="menu-icon dw dw-menu"></div>
@@ -33,21 +52,21 @@ $userImage = $_SESSION['user_image'] ?? '../vendors/images/photo1.jpg'; // Defau
                         </a>
                         <div class="dropdown-menu dropdown-menu-right p-3" style="min-width: 300px;">
                             <div class="form-group row">
-                                <label class="col-sm-12 col-md-2 col-form-label" for="search-from">From</label>
+                                <label class="col-sm-12 col-md-2 col-form-label">From</label>
                                 <div class="col-sm-12 col-md-10">
-                                    <input id="search-from" name="from" type="date" class="form-control form-control-sm form-control-line" />
+                                    <input type="date" name="from" class="form-control form-control-sm form-control-line">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-12 col-md-2 col-form-label" for="search-to">To</label>
+                                <label class="col-sm-12 col-md-2 col-form-label">To</label>
                                 <div class="col-sm-12 col-md-10">
-                                    <input id="search-to" name="to" type="date" class="form-control form-control-sm form-control-line" />
+                                    <input type="date" name="to" class="form-control form-control-sm form-control-line">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-12 col-md-2 col-form-label" for="search-subject">Subject</label>
+                                <label class="col-sm-12 col-md-2 col-form-label">Subject</label>
                                 <div class="col-sm-12 col-md-10">
-                                    <input id="search-subject" name="subject" type="text" class="form-control form-control-sm form-control-line" />
+                                    <input type="text" name="subject" class="form-control form-control-sm form-control-line">
                                 </div>
                             </div>
                             <div class="text-right">
@@ -61,34 +80,32 @@ $userImage = $_SESSION['user_image'] ?? '../vendors/images/photo1.jpg'; // Defau
     </div>
 
     <div class="header-right">
-        <!-- Settings button (example) -->
+        <!-- Settings -->
         <div class="dashboard-setting user-notification">
             <div class="dropdown">
-                <a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar" aria-label="Settings">
+                <a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
                     <i class="dw dw-settings2"></i>
                 </a>
             </div>
         </div>
 
-        <!-- Notifications dropdown -->
+        <!-- Notifications -->
         <div class="user-notification">
             <div class="dropdown">
-                <a class="dropdown-toggle no-arrow" href="#" role="button" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Notifications">
+                <a class="dropdown-toggle no-arrow" href="#" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="icon-copy dw dw-notification"></i>
                     <span class="badge notification-active"></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown" style="width: 300px;">
                     <div class="notification-list mx-h-350 customscroll">
                         <ul class="list-unstyled mb-0">
-                            <!-- Example notification items - replace with dynamic content -->
                             <li>
                                 <a href="#">
-                                    <img src="../vendors/images/img.jpg" alt="John Doe" class="rounded-circle" width="40" height="40">
+                                    <img src="<?= $baseURL ?>vendors/images/img.jpg" alt="John Doe" class="rounded-circle" width="40" height="40">
                                     <h3>John Doe</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                    <p>Lorem ipsum dolor sit amet...</p>
                                 </a>
                             </li>
-                            <!-- Add more notifications here -->
                         </ul>
                     </div>
                 </div>
@@ -98,11 +115,12 @@ $userImage = $_SESSION['user_image'] ?? '../vendors/images/photo1.jpg'; // Defau
         <!-- User profile dropdown -->
         <div class="user-info-dropdown">
             <div class="dropdown">
-                <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="user-icon mr-2">
-                        <img src="<?= htmlspecialchars($userImage) ?>" alt="User Image" class="rounded-circle" width="40" height="40">
+                <a class="dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 4px; padding-bottom: 4px;">
+                    <span class="user-icon mr-2" style="display: flex; align-items: center;">
+                        <img src="<?= htmlspecialchars($userImage) ?>" alt="User Image" 
+                             style="width:55px; height:55px; object-fit: cover; border-radius: 50%; display: block; margin-top: -4px;" />
                     </span>
-                    <span class="user-name"><?= $userEmail ?></span>
+                    <span class="user-name" style="line-height: 60px;"><?= $userEmail ?></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list" aria-labelledby="userDropdown">
                     <a class="dropdown-item" href="../profile/"><i class="dw dw-user1"></i> Profile</a>
@@ -113,9 +131,6 @@ $userImage = $_SESSION['user_image'] ?? '../vendors/images/photo1.jpg'; // Defau
     </div>
 </div>
 
-<!--
-  Notes:
-  - Make sure to include Bootstrap's JS + jQuery for dropdowns to work.
-  - Adjust notification and search form actions as needed.
-  - For logout, point the link to your logout.php script that destroys session.
--->
+<!-- Required JS for dropdowns -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

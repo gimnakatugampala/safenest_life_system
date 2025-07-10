@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost';            // or 127.0.0.1
+$host = '127.0.0.1';            // or 127.0.0.1
 $db   = 'safenest_db';   // 🔁 Change this to your DB name
 $user = 'root';         // 🔁 Your MySQL username
 $pass = '';     // 🔁 Your MySQL password
