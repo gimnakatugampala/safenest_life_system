@@ -46,7 +46,6 @@
 							<thead>
 								<tr>
                                     <th class="table-plus datatable-nosort">Admin Name</th>
-									<th>Created Date</th>
 									<th>Status</th>
 									<th>Email</th>
 									<th>Actions</th>
@@ -55,7 +54,6 @@
 							<tbody>
 								<tr>
 									<td class="table-plus">Gimna Katugampala</td>
-									<td>2025-07-01</td>
 									<td><span class="badge badge-pill badge-info">Pending</span></td>
 									<td>gimnakatugampal**@gmail.com</td>
 									<td>
@@ -106,5 +104,6 @@
 
 		</div>
 	</div>
+	<script src="../scripts/get_admins.js"></script>
 
 	<?php include_once '../includes/footer.php'; ?>
