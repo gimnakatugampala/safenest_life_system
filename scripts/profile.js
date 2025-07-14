@@ -80,6 +80,5 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => {
             console.error('Error loading profile:', error);
-            alert('Could not load profile data');
         });
 });
